@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import Container from '@/components/Container';
 
 export default function index({ heading, text }) {
+  const [active, setActive] = useState(false);
   return (
     <Layout>
       <Header
@@ -20,10 +21,16 @@ export default function index({ heading, text }) {
           </div>
           <div className="flex justify-between max-w-[114rem]">
             <div className="space-y-[4.8rem] w-[44.56%]">
-              <div className="h-[60.3rem] w-[100%] bg-zicron relative">
-                <div className="h-[16rem] w-[16rem] absolute  z-10 rounded-[100%] right-[88.77%] bottom-[6.4rem] flex items-center justify-center bg-red">
-                  <p className="text-white text-[2rem]">View</p>
-                </div>
+              <div
+                className="h-[60.3rem] w-[100%] bg-zicron relative"
+                onMouseOver={() => setActive(true)}
+                onMouseLeave={() => setActive(false)}
+              >
+                {active && (
+                  <div className="h-[16rem] w-[16rem] absolute  z-10 rounded-[100%] right-[88.77%] bottom-[6.4rem] flex items-center justify-center bg-red">
+                    <p className="text-white text-[2rem]">View</p>
+                  </div>
+                )}
               </div>
               <div className="space-y-[1.6rem]">
                 <h4 className="text-[2.4rem] font-bold capitalize ">Campus Manager</h4>
@@ -34,10 +41,16 @@ export default function index({ heading, text }) {
               </div>
             </div>
             <div className="space-y-[4.8rem] w-[44.56%]">
-              <div className="h-[60.3rem] w-[100%] bg-zicron relative">
-                <div className="h-[16rem] w-[16rem] absolute  z-10 rounded-[100%] right-[88.77%] bottom-[6.4rem] flex items-center justify-center bg-red">
-                  <p className="text-white text-[2rem]">View</p>
-                </div>
+              <div
+                className="h-[60.3rem] w-[100%] bg-zicron relative"
+                onMouseOver={() => setActive(true)}
+                onMouseLeave={() => setActive(false)}
+              >
+                {active && (
+                  <div className="h-[16rem] w-[16rem] absolute  z-10 rounded-[100%] right-[88.77%] bottom-[6.4rem] flex items-center justify-center bg-red">
+                    <p className="text-white text-[2rem]">View</p>
+                  </div>
+                )}
               </div>
               <div className="space-y-[1.6rem]">
                 <h4 className="text-[2.4rem] font-bold capitalize ">Campus Manager</h4>

@@ -12,7 +12,7 @@ export default function index({ heading, text }) {
             together.`}
       />
 
-      <Container className={'max-w-[144rem] w-[100%]'}>
+      <Container className={'max-width w-[100%]'}>
         <section className="space-y-[12rem] py-[18rem] w-[100%] flex flex-col items-center relative">
           <div className="flex items-center space-x-[1.6rem] max-w-[114rem] w-[100%]">
             <p className="uppercase text-[2.2rem] font-black tracking-[.8rem]">Projects</p>

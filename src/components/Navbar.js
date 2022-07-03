@@ -9,7 +9,7 @@ export default function Navbar() {
   };
   return (
     <Container className={'max-w-[100vw] fixed top-[0rem] z-[50] py-[1.6rem] bg-black'}>
-      <Container className={'max-w-[144rem] w-[100%]'}>
+      <Container className={'max-width w-[100%]'}>
         <section className={open ? `h-[100vh] [w-100%]` : `h-[auto] w-[100%] md:px-[3.2rem]`}>
           <div className="flex items-center justify-between h-[8.8vh]">
             <Link href="/">

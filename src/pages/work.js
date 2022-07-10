@@ -1,44 +1,43 @@
+import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Layout from '@/components/Layout';
 import Container from '@/components/Container';
+import Project from '@/components/Projects';
+import AOS from 'aos';
 
-export default function index({ heading }) {
+import 'aos/dist/aos.css';
+
+import { API_URL } from '@/config/index';
+const qs = require('qs');
+
+export default function index({ heading, projects, footer }) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <Layout>
+    <Layout footer={footer}>
       <Header heading={'Let’s create great things together'} className={'pb-[0rem]'}></Header>
       <section className="bg-black text-white pt-[1.6rem]">
-        <Container>
-          <section className="space-y-[12rem] pb-[10%] relative">
-            <div className="flex items-center space-x-[1.6rem]">
-              <p className="uppercase text-[2.2rem] font-bold tracking-[.8rem]">All Projects</p>
-              <svg className="w-[4rem] h-[4rem]">
-                <use href="/images/sprite.svg#icon-chevron-down" />
-              </svg>
+        <Container className={'max-width w-[100%]'}>
+          <section className="space-y-[12rem] py-[18rem] w-[100%] flex flex-col items-center relative">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="100"
+              data-aos-easing="ease-in-out"
+              className="flex flex-wrap justify-between gap-y-[8rem]  max-w-[114rem]"
+            >
+              {projects.map((project) => {
+                return <Project project={project} />;
+              })}
             </div>
-            <div className="flex justify-between">
-              <div className="space-y-[4.8rem] w-[44.56%]">
-                <div className="h-[60.3rem] w-[100%] bg-zicron relative">
-                  <div className="h-[16rem] w-[16rem] absolute  z-10 rounded-[100%] right-[90%] bottom-[6.4rem] flex items-center justify-center bg-red">
-                    <p className="text-white text-[2rem]">View</p>
-                  </div>
-                </div>
-                <div className="space-y-[1.6rem]">
-                  <h4 className="text-[2.4rem] font-bold capitalize ">Campus Manager</h4>
-                  <p className="text-[1.6rem]">
-                    The Campus Manager (TCM) is a flagship product of XPathEdge Solutions which covers all phases of a
-                    student’s life cycle at an institute of learning; from admission to graduation, and beyond.
-                  </p>
-                </div>
-              </div>
-              <div className="space-y-[4.8rem] w-[44.56%]">
-                <div className="h-[60.3rem] w-[100%] bg-zicron"></div>
-                <div className="space-y-[1.6rem]">
-                  <h4 className="text-[2.4rem] font-bold capitalize ">Campus Manager</h4>
-                  <p className="text-[1.6rem]">
-                    The Campus Manager (TCM) is a flagship product of XPathEdge Solutions which covers all phases of a
-                    student’s life cycle at an institute of learning; from admission to graduation, and beyond.
-                  </p>
-                </div>
+            <div className="flex justify-center w-[100%]">
+              <div className="flex items-center space-x-[1.6rem]">
+                <p className="text-[1.8rem]">View More</p>
+                <svg className="w-[2.4rem] h-[2.4rem]">
+                  <use href="/images/sprite.svg#icon-arrow" />
+                </svg>
               </div>
             </div>
           </section>
@@ -46,4 +45,24 @@ export default function index({ heading }) {
       </section>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  const query = qs.stringify(
+    {
+      populate: ['*'],
+      sort: ['createdAt:asc'],
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+  const res = await Promise.all([fetch(`${API_URL}/api/projects?${query}`), fetch(`${API_URL}/api/contact`)]);
+  const info = await Promise.all(res.map((res) => res.json()));
+  return {
+    props: {
+      projects: info[0].data,
+      footer: info[1].data,
+    },
+  };
 }

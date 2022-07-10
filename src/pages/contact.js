@@ -1,7 +1,9 @@
-import { useState } from 'react';
-import Header from '@/components/Header';
+import { useState, useEffect } from 'react';
 import Layout from '@/components/Layout';
 import Container from '@/components/Container';
+import AOS from 'aos';
+
+import 'aos/dist/aos.css';
 
 import { API_URL } from '@/config/index';
 const qs = require('qs');
@@ -38,19 +40,37 @@ export default function index({ footer }) {
       // return;
     }
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <Layout footer={footer}>
       <section className="bg-black text-white pt-[16%] pb-[5%]">
         <Container>
           <h3 className="text-[2.4rem] uppercase fold-bold font-IBMPlexMono">Let’s bring your ideas to life.</h3>
-          <h1 className="text-[8.8rem] font-bold mb-[12rem] font-IBMPlexMono">Get in touch.</h1>
+          <h1 className="text-[8.8rem] font-bold mb-[12rem] font-IBMPlexMono">
+            Get in touch.<span className="text-red">_</span>
+          </h1>
 
           <div className="flex justify-between">
-            <p className="w-[33.94%] text-[1.8rem]">
-              Ut pariatur enim et dolore voluptatem sed placeat omnis ut voluptatibus ratione quo quisquam tempora nam
-              amet assumenda est vero sint eos temporibus consequatur minus amet.
+            <p
+              data-aos="fade-right"
+              data-aos-duration="500"
+              data-aos-delay="50"
+              data-aos-easing="ease-in-out"
+              className="w-[33.94%] text-[1.8rem]"
+            >
+              Our Team is geared towards solving even the most complex ideas. Talk to us about your needs
             </p>
-            <form className="w-[57.63%] space-y-[2.4rem]" onSubmit={handleSubmit}>
+            <form
+              data-aos="fade-left"
+              data-aos-duration="500"
+              data-aos-delay="50"
+              data-aos-easing="ease-in-out"
+              className="w-[57.63%] space-y-[2.4rem]"
+              onSubmit={handleSubmit}
+            >
               <input
                 className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
                 type="text"

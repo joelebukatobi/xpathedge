@@ -54,9 +54,9 @@ export default function index({ heading, text, footer, services }) {
               className="flex justify-between"
             >
               <p className="text-[1.8rem] w-[49.12%]">
-                Ut pariatur enim et dolore voluptatem sed placeat omnis ut voluptatibus ratione quo quisquam tempora nam
-                amet assumenda est vero sint eos. Ut pariatur enim et dolore voluptatem sed placeat omnis ut
-                voluptatibus ratione quo quisquam tempora nam amet assumenda est vero sint eos.
+                At Xpathedge, our approach to conceptualizing ideas and creating solutions is specific to every client.
+                We are consistently innovating with every brief in a bid to create processes that ease your workflow in
+                the realization of your bottom line.
               </p>
               <ul
                 data-aos="fade-left"

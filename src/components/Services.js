@@ -13,7 +13,7 @@ export default function Services({ works }) {
   }, []);
   return (
     <Container>
-      <section className="pt-[10.4rem] pb-[16rem] space-y-[7.2rem]">
+      <section className="pt-[10.4rem] pb-[16rem] space-y-[16rem] lg:space-y-[7.2rem]">
         <div
           data-aos="fade-right"
           data-aos-duration="500"
@@ -29,12 +29,12 @@ export default function Services({ works }) {
           data-aos-duration="500"
           data-aos-delay="100"
           data-aos-easing="ease-in-out"
-          className="flex flex-wrap gap-y-[8rem] justify-between w-[100%]"
+          className="flex flex-wrap gap-y-[8rem]  justify-center lg:justify-between w-[100%]"
         >
           {works.map((service) => (
-            <div className="space-y-[4.8rem] w-[48%]">
-              <h2 className="text-[6.8rem] font-IBMPlexMono font-bold">{service.attributes.service}</h2>
-              <p className="text-[1.6rem] w-[81.6%]">{service.attributes.description}</p>
+            <div className="space-y-[.8rem] lg:space-y-[4.8rem] md:w-[75%] lg:w-[48%]">
+              <h2 className="text-[4rem] lg:text-[6.8rem] font-IBMPlexMono font-bold ">{service.attributes.service}</h2>
+              <p className=" text-[1.6rem] md:w-[81.6%]">{service.attributes.description}</p>
             </div>
           ))}
         </div>

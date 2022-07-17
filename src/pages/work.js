@@ -17,7 +17,7 @@ export default function index({ heading, projects, footer }) {
 
   return (
     <Layout footer={footer}>
-      <Header heading={'Let’s create great things together'} className={'pb-[0rem]'}></Header>
+      <Header heading={'Let’s create great things together'} className={'pb-[0rem] md:mt-[12vh]'}></Header>
       <section className="bg-black text-white pt-[1.6rem]">
         <Container className={'max-width w-[100%]'}>
           <section className="space-y-[12rem] py-[18rem] w-[100%] flex flex-col items-center relative">
@@ -26,7 +26,7 @@ export default function index({ heading, projects, footer }) {
               data-aos-duration="500"
               data-aos-delay="100"
               data-aos-easing="ease-in-out"
-              className="flex flex-wrap justify-between gap-y-[8rem]  max-w-[114rem]"
+              className="flex flex-wrap justify-center lg:justify-between gap-y-[8rem]  max-w-[114rem]"
             >
               {projects.map((project) => {
                 return <Project project={project} />;

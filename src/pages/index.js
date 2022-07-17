@@ -40,7 +40,7 @@ export default function index({ heading, text, services, projects, footer }) {
             data-aos-duration="500"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
-            className="flex flex-wrap justify-between gap-y-[8rem]  max-w-[114rem]"
+            className="flex flex-wrap justify-center lg:justify-between gap-y-[8rem]  max-w-[114rem]"
           >
             {projects.map((project) => {
               return <Project project={project} />;

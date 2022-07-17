@@ -17,9 +17,9 @@ export default function Footer({ footer }) {
           data-aos-duration="500"
           data-aos-delay="50"
           data-aos-easing="ease-in-out"
-          className="w-[60%] space-y-[.8rem]"
+          className="lg:w-[60%] space-y-[.8rem]"
         >
-          <h3 className="text-[5.8rem] font-bold font-IBMPlexMono">{footer.attributes.heading}</h3>
+          <h3 className="text-[3.2rem] md:text-[5.8rem] font-bold font-IBMPlexMono">{footer.attributes.heading}</h3>
           <div className="flex items-center space-x-[1.6rem]">
             <h4 className="text-[2.4rem]">{footer.attributes.caption}</h4>
             <svg className="w-[2.4rem] h-[2.4rem]">
@@ -27,14 +27,14 @@ export default function Footer({ footer }) {
             </svg>
           </div>
         </div>
-        <div className=" space-y-[12rem]">
-          <div className="flex justify-between">
+        <div className="space-y-[2.4rem] md:space-y-[12rem]">
+          <div className="flex flex-col space-y-[4rem] md:space-y-[0] md:flex-row justify-between">
             <div
               data-aos="fade-right"
               data-aos-duration="500"
               data-aos-delay="50"
               data-aos-easing="ease-in-out"
-              className="w-[27.63%] space-y-[1.6rem]"
+              className="md:w-[27.63%] space-y-[1.6rem]"
             >
               <h4 className="text-[2.4rem] font-bold font-Mulish">{footer.attributes.email}</h4>
               <h5 className="text-[2rem]">{footer.attributes.address}</h5>
@@ -44,21 +44,21 @@ export default function Footer({ footer }) {
               data-aos-duration="500"
               data-aos-delay="100"
               data-aos-easing="ease-in-out"
-              className="w-[38.6%] flex gap-x-[10.4rem] flex-wrap"
+              className="w-[100%] md:w-[38.6%] flex gap-x-[4rem] md:gap-x-[10.4rem] flex-wrap"
             >
-              <li className="text-[2rem] w-[15%]">
+              <li className="text-[2rem] md:w-[15%]">
                 <Link href={footer.attributes.linkedin}>LinkedIn</Link>
               </li>
-              <li className="text-[2rem] w-[15%]">
+              <li className="text-[2rem] md:w-[15%]">
                 <Link href={footer.attributes.twitter}>Twitter</Link>
               </li>
-              <li className="text-[2rem] w-[15%]">
+              <li className="text-[2rem] md:w-[15%]">
                 <Link href={footer.attributes.behance}>Behance</Link>
               </li>
-              <li className="text-[2rem] w-[15%]">
+              <li className="text-[2rem] md:w-[15%]">
                 <Link href={footer.attributes.instagram}>Instagram</Link>
               </li>
-              <li className="text-[2rem] w-[15%]">
+              <li className="text-[2rem] md:w-[15%]">
                 <Link href={footer.attributes.facebook}>Facebook</Link>
               </li>
             </ul>

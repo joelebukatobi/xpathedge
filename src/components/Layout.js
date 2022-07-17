@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 export default function Layout({ children, footer }) {
   return (
     <>
-      <Navbar />
+      <Navbar footer={footer} />
       {children}
       <Footer footer={footer} />
     </>

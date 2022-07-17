@@ -9,7 +9,9 @@ export default function Header({ heading, text, children, className }) {
     AOS.init();
   }, []);
   return (
-    <section className={`${className} bg-black py-[16%] flex items-center text-white `}>
+    <section
+      className={`${className} bg-black md:py-[24%] lg:py-[16%] lg:mt-[0] h-[100vh] md:h-[auto] flex items-center text-white `}
+    >
       <Container>
         <div className="space-y-[2.4rem]">
           <h1
@@ -17,7 +19,7 @@ export default function Header({ heading, text, children, className }) {
             data-aos-duration="500"
             data-aos-delay="50"
             data-aos-easing="ease-in-out"
-            className="text-[8.8rem] font-IBMPlexMono font-bold "
+            className="text-[4rem] md:text-[8rem] lg:text-[6.4rem] xl:text-[8.8rem] font-IBMPlexMono font-bold "
           >
             {heading}
           </h1>
@@ -26,7 +28,7 @@ export default function Header({ heading, text, children, className }) {
             data-aos-duration="500"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
-            className="text-[2.4rem] font-normal w-[72.4%;]"
+            className="text-[2.4rem] font-normal md:w-[72.4%;]"
           >
             {text}
           </h4>

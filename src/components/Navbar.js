@@ -26,7 +26,11 @@ export default function Navbar({ footer }) {
           </div>
         </section>
         <section
-          className={open ? `fixed h-[91.2vh] top-0 left-0 w-[100%] flex items-center mt-[8.8vh] text-white` : `hidden`}
+          className={
+            open
+              ? `fixed md:h-[91.2vh] top-[16vh] md:top-[0] left-0 w-[100%] flex items-center mt-[8.8vh] text-white`
+              : `hidden`
+          }
         >
           <Container className={'h-[100%] w-[100%]'}>
             <div className="flex flex-col-reverse md:flex-row items-center h-[100%] w-[100%] justify-between">

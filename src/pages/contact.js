@@ -46,20 +46,22 @@ export default function index({ footer }) {
   }, []);
   return (
     <Layout footer={footer}>
-      <section className="bg-black text-white pt-[16%] pb-[5%]">
+      <section className="bg-black text-white pt-[16%] md:pt-[32%] lg:pt-[16%] pb-[5%]">
         <Container>
-          <h3 className="text-[2.4rem] uppercase fold-bold font-IBMPlexMono">Let’s bring your ideas to life.</h3>
-          <h1 className="text-[8.8rem] font-bold mb-[12rem] font-IBMPlexMono">
+          <h3 className="mt-[10.4vh] md:mt-[0] text-[2rem] uppercase fold-bold font-IBMPlexMono">
+            Let’s bring your ideas to life.
+          </h3>
+          <h1 className="text-[8.8rem] md:text-[6.4rem] lg:text-[8.8rem]  font-bold mb-[8rem] md:mb-[12rem] font-IBMPlexMono">
             Get in touch.<span className="text-red">_</span>
           </h1>
 
-          <div className="flex justify-between">
+          <div className="flex flex-col space-y-[4rem] md:space-y-[0] md:flex-row justify-between">
             <p
               data-aos="fade-right"
               data-aos-duration="500"
               data-aos-delay="50"
               data-aos-easing="ease-in-out"
-              className="w-[33.94%] text-[1.8rem]"
+              className="md:w-[33.94%] text-[1.8rem]"
             >
               Our Team is geared towards solving even the most complex ideas. Talk to us about your needs
             </p>
@@ -68,7 +70,7 @@ export default function index({ footer }) {
               data-aos-duration="500"
               data-aos-delay="50"
               data-aos-easing="ease-in-out"
-              className="w-[57.63%] space-y-[2.4rem]"
+              className="md:w-[57.63%] space-y-[2.4rem]"
               onSubmit={handleSubmit}
             >
               <input
@@ -110,9 +112,9 @@ export default function index({ footer }) {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
-              <button className="flex items-center w-[40%] justify-end mx-auto relative">
+              <button className="flex items-center w-[100%] xl:w-[40%] justify-end mx-auto relative">
                 <div className="flex items-center absolute">
-                  <h3 className="text-[2.4rem] mr-[4.8rem]">
+                  <h3 className="w-[100%] text-[2.4rem] mr-[4.8rem]">
                     Send <span className="text-red">Message</span>
                   </h3>
                   <svg className="h-[2.4rem] w-[2.4rem]">

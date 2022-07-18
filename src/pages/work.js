@@ -17,10 +17,13 @@ export default function index({ heading, projects, footer }) {
 
   return (
     <Layout footer={footer}>
-      <Header heading={'Let’s create great things together'} className={'pb-[0rem] md:mt-[12vh]'}></Header>
+      <Header
+        heading={'Let’s create great things together'}
+        className={'pt-[24vh] pb-[0rem] md:mt-[12vh] h-auto'}
+      ></Header>
       <section className="bg-black text-white pt-[1.6rem]">
         <Container className={'max-width w-[100%]'}>
-          <section className="space-y-[12rem] py-[18rem] w-[100%] flex flex-col items-center relative">
+          <section className="space-y-[12rem] pb-[8rem] w-[100%] flex flex-col items-center relative">
             <div
               data-aos="fade-up"
               data-aos-duration="500"

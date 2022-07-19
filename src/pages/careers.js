@@ -8,7 +8,7 @@ const qs = require('qs');
 export default function index({ careers, footer }) {
   return (
     <Layout footer={footer}>
-      <Header heading={'Join our team of magicians'} className={'pb-[5%] pt-[24vh] h-auto'}></Header>
+      <Header heading={'Join our team of magicians'} className={'pb-[5%] pt-[24vh] h-[auto]'}></Header>
       <Careers careers={careers} />
     </Layout>
   );

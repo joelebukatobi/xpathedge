@@ -19,7 +19,7 @@ export default function index({ heading, projects, footer }) {
     <Layout footer={footer}>
       <Header
         heading={'Let’s create great things together'}
-        className={'pt-[24vh] pb-[0rem] md:mt-[12vh] h-auto'}
+        className={'pt-[24vh] pb-[0rem] md:mt-[12vh] h-[auto] border-2'}
       ></Header>
       <section className="bg-black text-white pt-[1.6rem]">
         <Container className={'max-width w-[100%]'}>

@@ -16,7 +16,7 @@ export default function index({ heading, text, footer, services }) {
   }, []);
   return (
     <Layout footer={footer}>
-      <Header heading={'Imagination is the only limitation'}>
+      <Header heading={'Imagination is the only limitation'} className={'h-[100vh] md:h-[auto]'}>
         <div
           data-aos="fade-up"
           data-aos-duration="500"

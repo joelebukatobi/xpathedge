@@ -21,6 +21,7 @@ export default function index({ heading, text, services, projects, footer }) {
         heading={'Imagination is the only limitation'}
         text={`Tailor-made technological solutions, creative expressions, and flawless executions. Let’s disrupt the norm,
             together.`}
+        className={'h-[100vh] md:h-[auto]'}
       />
 
       <Container className={'max-width w-[100%]'}>

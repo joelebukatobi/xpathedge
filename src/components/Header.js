@@ -10,7 +10,7 @@ export default function Header({ heading, text, children, className }) {
   }, []);
   return (
     <section
-      className={`bg-black md:py-[24%] lg:py-[16%] lg:mt-[0] h-[100vh] md:h-[auto] flex items-center text-white ${className}`}
+      className={`${className} bg-black md:py-[24%] lg:py-[16%] lg:mt-[0] h-[100vh] md:h-[auto] flex items-center text-white`}
     >
       <Container>
         <div className="space-y-[2.4rem]">

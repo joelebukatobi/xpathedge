@@ -34,7 +34,7 @@ export default function Projects({ project }) {
             className="h-[10.4rem] w-[10.4rem] md:h-[16rem] md:w-[16rem] absolute  z-10 rounded-[100%] right-[unset] left-[-3.2rem] md:right-[unset] md:left-[-6.4rem] lg:right-[unset] lg:left-[-3.2rem] xl:left-[unset] xl:right-[88.77%] bottom-[6.4rem] flex items-center justify-center cursor-pointer bg-red"
           >
             <p className="text-white text-[2rem]">
-              <Link href="">View</Link>
+              <Link href={`${project.attributes.link}`}>View</Link>
             </p>
           </div>
         )}

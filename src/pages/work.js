@@ -35,14 +35,14 @@ export default function index({ heading, projects, footer }) {
                 return <Project project={project} />;
               })}
             </div>
-            <div className="flex justify-center w-[100%]">
+            {/* <div className="flex justify-center w-[100%]">
               <div className="flex items-center space-x-[1.6rem]">
                 <p className="text-[1.8rem]">View More</p>
                 <svg className="w-[2.4rem] h-[2.4rem]">
                   <use href="/images/sprite.svg#icon-arrow" />
                 </svg>
               </div>
-            </div>
+            </div> */}
           </section>
         </Container>
       </section>

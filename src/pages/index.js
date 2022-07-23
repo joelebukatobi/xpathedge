@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Layout from '@/components/Layout';
 import Container from '@/components/Container';
@@ -49,7 +50,9 @@ export default function index({ services, projects, footer }) {
           </div>
           <div className="flex justify-center w-[100%]">
             <div className="flex items-center space-x-[1.6rem]">
-              <p className="text-[1.8rem]">View More</p>
+              <p className="text-[1.8rem]">
+                <Link href="/work">View More</Link>
+              </p>
               <svg className="w-[2.4rem] h-[2.4rem]">
                 <use href="/images/sprite.svg#icon-arrow" />
               </svg>
@@ -73,13 +76,26 @@ export async function getServerSideProps() {
       encodeValuesOnly: true,
     }
   );
+
+  const projects = qs.stringify(
+    {
+      populate: ['*'],
+      sort: ['createdAt:asc'],
+      pagination: {
+        start: 0,
+        limit: 2,
+      },
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
   const res = await Promise.all([
     fetch(`${API_URL}/api/services?${query}`),
-    fetch(`${API_URL}/api/projects?${query}`),
+    fetch(`${API_URL}/api/projects?${projects}`),
     fetch(`${API_URL}/api/contact`),
   ]);
   const info = await Promise.all(res.map((res) => res.json()));
-  console.log(res);
   return {
     props: {
       services: info[0].data,

@@ -21,7 +21,9 @@ export default function Footer({ footer }) {
         >
           <h3 className="text-[3.2rem] md:text-[5.8rem] font-bold font-IBMPlexMono">{footer.attributes.heading}</h3>
           <div className="flex items-center space-x-[1.6rem]">
-            <h4 className="text-[2.4rem]">{footer.attributes.caption}</h4>
+            <h4 className="text-[2.4rem]">
+              <Link href="/contact">{footer.attributes.caption}</Link>
+            </h4>
             <svg className="w-[2.4rem] h-[2.4rem]">
               <use href="/images/sprite.svg#icon-arrow" />
             </svg>

@@ -16,7 +16,7 @@ export default function index({ heading, projects, footer }) {
   }, []);
 
   return (
-    <Layout footer={footer}>
+    <Layout footer={footer} title={'xPathEdge | Work'}>
       <Header
         heading={'Let’s create great things together'}
         className={'mt-[10vh] pt-[5.6rem] pb-[4rem] md:pb-[8rem] lg:pb-[8rem]'}

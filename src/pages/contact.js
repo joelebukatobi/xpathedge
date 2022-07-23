@@ -45,7 +45,7 @@ export default function index({ footer }) {
     AOS.init();
   }, []);
   return (
-    <Layout footer={footer}>
+    <Layout footer={footer} title={'xPathEdge | Contact'}>
       <section className="bg-black text-white pt-[16%] md:pt-[32%] lg:pt-[16%] pb-[5%]">
         <Container>
           <h3 className="mt-[12vh] md:mt-[0] text-[2rem] uppercase fold-bold font-IBMPlexMono">

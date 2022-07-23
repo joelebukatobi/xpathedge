@@ -15,8 +15,8 @@ export default function index({ heading, text, footer, services }) {
     AOS.init();
   }, []);
   return (
-    <Layout footer={footer}>
-      <Header heading={'Imagination is the only limitation'} className={'mt-[10vh] pt-[5.6rem] pb-[8rem]'}>
+    <Layout footer={footer} title={'xPathEdge | About'}>
+      <Header heading={`Together, let's create magic`} className={'mt-[10vh] pt-[5.6rem] pb-[8rem]'}>
         <div
           data-aos="fade-up"
           data-aos-duration="500"

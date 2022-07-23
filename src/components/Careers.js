@@ -14,7 +14,7 @@ export default function Career({ careers }) {
   return (
     <section className="bg-black text-white">
       <Container>
-        <section className="space-y-[12rem] pb-[10%] relative">
+        <section className="space-y-[3.2rem] md:space-y-[12rem] pb-[10%] relative">
           <Dropdown name={'All'} options={options} />
           <div className="space-y-[18rem]">
             {careers.map((career) => (

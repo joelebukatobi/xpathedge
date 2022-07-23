@@ -16,7 +16,7 @@ export default function index({ heading, text, footer, services }) {
   }, []);
   return (
     <Layout footer={footer}>
-      <Header heading={'Imagination is the only limitation'} className={'h-[100vh] md:h-[auto]'}>
+      <Header heading={'Imagination is the only limitation'} className={'mt-[10vh] pt-[5.6rem] pb-[8rem]'}>
         <div
           data-aos="fade-up"
           data-aos-duration="500"
@@ -72,7 +72,8 @@ export default function index({ heading, text, footer, services }) {
                     </svg>
                   </div>
                   <p className="text-[1.8rem]">
-                    Ut pariatur enim et dolore voluptatem sed placeat omnis ut voluptatibus ratione.
+                    Our team comprises the most experienced professionals poised to deliver tailor-made solutions to
+                    your business at all times
                   </p>
                 </li>
                 <li className="flex space-x-[3.2rem]">
@@ -82,7 +83,8 @@ export default function index({ heading, text, footer, services }) {
                     </svg>
                   </div>
                   <p className="text-[1.8rem]">
-                    Ut pariatur enim et dolore voluptatem sed placeat omnis ut voluptatibus ratione.
+                    We offer various unique services to suit your every need. We are committed to building long-lasting
+                    relationships and ensuring you remain top of mind at all times.
                   </p>
                 </li>
                 <li className="flex space-x-[3.2rem]">
@@ -92,7 +94,8 @@ export default function index({ heading, text, footer, services }) {
                     </svg>
                   </div>
                   <p className="text-[1.8rem]">
-                    Ut pariatur enim et dolore voluptatem sed placeat omnis ut voluptatibus ratione.
+                    Our mission to create a competitive edge for you remains unwavering and this is evident in our
+                    commitment to ensuring your business objectives are always met.
                   </p>
                 </li>
               </ul>

@@ -21,11 +21,11 @@ export default function index({ heading, text, services, projects, footer }) {
         heading={'Imagination is the only limitation'}
         text={`Tailor-made technological solutions, creative expressions, and flawless executions. Let’s disrupt the norm,
             together.`}
-        className={'h-[100vh] md:h-[auto]'}
+        className={'mt-[10vh] pt-[5.6rem] pb-[8rem]'}
       />
 
       <Container className={'max-width w-[100%]'}>
-        <section className="space-y-[12rem] py-[18rem] w-[100%] flex flex-col items-center relative">
+        <section className="space-y-[8rem] md:space-y-[12rem] py-[8rem] md:py-[18rem] w-[100%] flex flex-col items-center relative">
           <div
             data-aos="fade-right"
             data-aos-duration="500"
@@ -33,7 +33,7 @@ export default function index({ heading, text, services, projects, footer }) {
             data-aos-easing="ease-in-out"
             className="flex items-center space-x-[1.6rem] max-w-[114rem] w-[100%]"
           >
-            <p className="uppercase text-[2.2rem] font-black tracking-[.8rem]">Projects</p>
+            <p className="uppercase text-[1.6rem] md:text-[2.2rem] font-black tracking-[.8rem]">Projects</p>
             <hr className="h-[.2rem] w-[32rem] bg-black border-none" />
           </div>
           <div

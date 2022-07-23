@@ -51,7 +51,7 @@ export default function index({ footer }) {
           <h3 className="mt-[12vh] md:mt-[0] text-[2rem] uppercase fold-bold font-IBMPlexMono">
             Let’s bring your ideas to life.
           </h3>
-          <h1 className="text-[6.4rem] lg:text-[8.8rem]  font-bold mb-[8rem] md:mb-[12rem] font-IBMPlexMono">
+          <h1 className="text-[3.2rem] md:text-[6.4rem] lg:text-[8.8rem]  font-bold mb-[8rem] md:mb-[12rem] font-IBMPlexMono">
             Get in touch.<span className="text-red">_</span>
           </h1>
 

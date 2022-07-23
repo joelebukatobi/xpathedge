@@ -9,7 +9,7 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-check">
     <path d="M16.4598 7L10.1839 13.3724L8.09195 11.2483L6 13.3724L10.1839 17.6207L18.5517 9.12414L16.4598 7Z" fill="white"/>
   </symbol>
-    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="icon-chevron-down">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="icon-chevron-down">
     <path d="M29.8705 17.0372L22 24.9077L14.1295 17.0372L11.5372 19.6295L22 30.0923L32.4628 19.6295L29.8705 17.0372Z" fill="white"></path>
   </symbol>
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-arrow">

@@ -24,14 +24,14 @@ export default function Projects({ project }) {
       onMouseOut={handleMouseOut}
       onMouseOver={handleMouseOver}
     >
-      <div className="h-[60rem] w-[100%] bg-zicron relative">
+      <div className="h-[44.8rem] md:h-[60rem] w-[100%] bg-zicron relative">
         {active && (
           <div
             data-aos="zoom-in"
             data-aos-duration="400"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
-            className="h-[10.4rem] w-[10.4rem] md:h-[16rem] md:w-[16rem] absolute  z-10 rounded-[100%] right-[unset] left-[-3.2rem] md:left-[unset] md:right-[88.77%] bottom-[6.4rem] flex items-center justify-center cursor-pointer bg-red"
+            className="h-[10.4rem] w-[10.4rem] md:h-[16rem] md:w-[16rem] absolute  z-10 rounded-[100%] right-[unset] left-[-3.2rem] md:right-[unset] md:left-[-6.4rem] lg:right-[unset] lg:left-[-3.2rem] xl:left-[unset] xl:right-[88.77%] bottom-[6.4rem] flex items-center justify-center cursor-pointer bg-red"
           >
             <p className="text-white text-[2rem]">
               <Link href="">View</Link>

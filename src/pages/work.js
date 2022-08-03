@@ -53,7 +53,7 @@ export default function index({ heading, projects, footer }) {
 export async function getServerSideProps() {
   const query = qs.stringify(
     {
-      populate: ['*'],
+      populate: ['*', 'image'],
       sort: ['createdAt:asc'],
     },
     {
@@ -62,6 +62,7 @@ export async function getServerSideProps() {
   );
   const res = await Promise.all([fetch(`${API_URL}/api/projects?${query}`), fetch(`${API_URL}/api/contact`)]);
   const info = await Promise.all(res.map((res) => res.json()));
+  console.log(res);
   return {
     props: {
       projects: info[0].data,

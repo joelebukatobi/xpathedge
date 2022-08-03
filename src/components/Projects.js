@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import AOS from 'aos';
 
+// import { API_URL } from '@/config/index';
+
 import 'aos/dist/aos.css';
 
 export default function Projects({ project }) {
@@ -25,6 +27,9 @@ export default function Projects({ project }) {
       onMouseOver={handleMouseOver}
     >
       <div className="h-[44.8rem] md:h-[60rem] w-[100%] bg-zicron relative">
+        <div className="h-[100] w-[100]  overflow-hidden">
+          <img src={project.attributes.image.data.attributes.formats.small.url} alt="" className="h-[100%] w-[100%]" />
+        </div>
         {active && (
           <div
             data-aos="zoom-in"

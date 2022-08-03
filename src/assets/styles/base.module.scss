@@ -3,6 +3,21 @@
 body {
   font-family: Mulish;
 }
+::-webkit-scrollbar {
+  width: 0.8rem;
+  &:hover {
+    width: 1rem;
+  }
+  &-track {
+    background: #676767;
+  }
+  &-thumb {
+    background: #676767;
+    &:hover {
+      background: #aa0000;
+    }
+  }
+}
 
 html {
   -webkit-tap-highlight-color: transparent;

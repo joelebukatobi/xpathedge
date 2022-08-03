@@ -79,7 +79,7 @@ export async function getServerSideProps() {
 
   const projects = qs.stringify(
     {
-      populate: ['*'],
+      populate: ['*', 'image'],
       sort: ['createdAt:asc'],
       pagination: {
         start: 0,

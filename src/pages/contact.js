@@ -18,17 +18,16 @@ export default function index({ footer }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`http://localhost:1337/`, {
+    const res = await fetch(`${API_URL}/api/email`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        to: 'joelebuka@gmail.com',
-        from: 'joelebuka@gmail.com',
+        to: 'support@xpathedge.com',
+        from: email,
         subject: 'xPathEdge Contact Form',
         name: name,
-        email: email,
         company: company,
         text: message,
       }),
@@ -103,7 +102,7 @@ export default function index({ footer }) {
                 placeholder="Company"
                 id="company"
                 value={company}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={(e) => setCompany(e.target.value)}
               />
               <textarea
                 className="border-[.1rem] border-white w-[100%] bg-black bg-transparent h-[24rem] text-[1.6rem] p-[3.2rem]"

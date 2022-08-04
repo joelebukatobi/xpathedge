@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Layout from '@/components/Layout';
 import Container from '@/components/Container';
+import Success from '@/components/Success';
 import AOS from 'aos';
 
 import 'aos/dist/aos.css';
@@ -14,6 +15,7 @@ export default function index({ footer }) {
   const [phone, setPhone] = useState('');
   const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
+  const [open, setOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,108 +27,208 @@ export default function index({ footer }) {
       },
       body: JSON.stringify({
         to: 'support@xpathedge.com',
-        from: email,
+        from: 'support@xpathedge.com',
         subject: 'xPathEdge Contact Form',
-        name: name,
-        company: company,
-        text: message,
+        html: `<!DOCTYPE>
+        <html lang="en">
+          <head>
+            <meta charset="utf-8" />
+        
+            <title>xPathEdge Mail</title>
+            <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;600&display=swap"
+              rel="stylesheet"
+            />
+            <style>
+            * {
+            font-family: "Mulish";
+            color: #191919;
+          }
+
+          a,
+          a:link,
+          a:visited,
+          a:focus {
+            text-decoration: none;
+            outline: none;
+          }
+    
+          .heading {
+            background-color: #191919;
+          }
+    
+          .heading h3 {
+            color: #ffffff;
+          }
+    
+          .content {
+            font-size: 16px;
+          }
+    
+          .contact {
+            font-size: 16px;
+            margin-bottom: 16px;
+          }
+          p {
+            margin: 0;
+          }
+    
+          .footer-links {
+            background-color: #191919;
+            border-radius: 2px;
+            padding: 16px;
+            color: #ffffff;
+          }
+    
+          .footer-links a,
+          .footer-links p {
+            color: #ffffff;
+          }
+            </style>
+          </head>
+        
+          <body>
+            <div class="container">
+              <div class="heading">
+                <h3>
+                  You've got a new mail from ${name}
+                </h3>
+              </div>
+              <hr/>
+              <div class="content">
+                <h4>Message:</h4>
+                <p>
+                  ${message}
+                  <br />
+                  You can reach out to me via my contact details below
+                </p>
+                <br />
+              </div>
+              <div class="contact">
+              <p>
+                Email -
+                <a href="mailto:${email}"> ${email}</a>
+              </p>
+              <p>
+                Phone - 
+                <a href="tel:${phone}"> ${phone}</a>
+              </p>
+                <p>Company - ${company}</p>
+              </div>
+              <div class="footer-links">
+                <p>
+                  <a href="https://www.xpathedge.com">xPathEdge</a> | 110 W Randol Mill Rd Suite 230 Arlington, TX 76011
+                </p>
+              </div>
+            </div>
+          </body>
+        </html>
+        `,
       }),
     });
 
-    const { error } = await res.json();
-    if (error) {
-      console.log(error);
-      // return;
+    if (res.status === 200) {
+      setOpen(true);
     }
+  };
+
+  const toggle = () => {
+    setOpen(!open);
   };
 
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-    <Layout footer={footer} title={'xPathEdge | Contact'}>
-      <section className="bg-black text-white pt-[16%] md:pt-[32%] lg:pt-[16%] pb-[5%]">
-        <Container>
-          <h3 className="mt-[12vh] md:mt-[0] text-[2rem] uppercase fold-bold font-IBMPlexMono">
-            Let’s bring your ideas to life.
-          </h3>
-          <h1 className="text-[3.2rem] md:text-[6.4rem] lg:text-[8.8rem]  font-bold mb-[8rem] md:mb-[12rem] font-IBMPlexMono">
-            Get in touch.<span className="text-red">_</span>
-          </h1>
+    <>
+      <Layout footer={footer} title={'xPathEdge | Contact'}>
+        <section className="bg-black text-white pt-[16%] md:pt-[32%] lg:pt-[16%] pb-[5%]">
+          <Container>
+            <h3 className="mt-[12vh] md:mt-[0] text-[2rem] uppercase fold-bold font-IBMPlexMono">
+              Let’s bring your ideas to life.
+            </h3>
+            <h1 className="text-[3.2rem] md:text-[6.4rem] lg:text-[8.8rem]  font-bold mb-[8rem] md:mb-[12rem] font-IBMPlexMono">
+              Get in touch.<span className="text-red">_</span>
+            </h1>
 
-          <div className="flex flex-col space-y-[4rem] md:space-y-[0] md:flex-row justify-between">
-            <p
-              data-aos="fade-right"
-              data-aos-duration="500"
-              data-aos-delay="50"
-              data-aos-easing="ease-in-out"
-              className="md:w-[33.94%] text-[1.8rem]"
-            >
-              Our Team is geared towards solving even the most complex ideas. Talk to us about your needs
-            </p>
-            <form
-              data-aos="fade-left"
-              data-aos-duration="500"
-              data-aos-delay="50"
-              data-aos-easing="ease-in-out"
-              className="md:w-[57.63%] space-y-[2.4rem]"
-              onSubmit={handleSubmit}
-            >
-              <input
-                className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
-                type="text"
-                placeholder="Name"
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <input
-                className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
-                type="text"
-                placeholder="Email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />{' '}
-              <input
-                className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
-                type="text"
-                placeholder="Phone"
-                id="phone"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-              />{' '}
-              <input
-                className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
-                type="text"
-                placeholder="Company"
-                id="company"
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
-              />
-              <textarea
-                className="border-[.1rem] border-white w-[100%] bg-black bg-transparent h-[24rem] text-[1.6rem] p-[3.2rem]"
-                placeholder="Tell us about the project"
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              ></textarea>
-              <button className="flex items-center w-[100%] xl:w-[40%] justify-end mx-auto relative">
-                <div className="flex items-center absolute">
-                  <h3 className="w-[100%] text-[2.4rem] mr-[4.8rem]">
-                    Send <span className="text-red">Message</span>
-                  </h3>
-                  <svg className="h-[2.4rem] w-[2.4rem]">
-                    <use href="/images/sprite.svg#icon-arrow" />
-                  </svg>
-                </div>
-                <div className="h-[16rem] w-[16rem] bg-white rounded-[100%]"></div>
-              </button>
-            </form>
-          </div>
-        </Container>
-      </section>
-    </Layout>
+            <div className="flex flex-col space-y-[4rem] md:space-y-[0] md:flex-row justify-between">
+              <p
+                data-aos="fade-right"
+                data-aos-duration="500"
+                data-aos-delay="50"
+                data-aos-easing="ease-in-out"
+                className="md:w-[33.94%] text-[1.8rem]"
+              >
+                Our Team is geared towards solving even the most complex ideas. Talk to us about your needs
+              </p>
+              <form
+                data-aos="fade-left"
+                data-aos-duration="500"
+                data-aos-delay="50"
+                data-aos-easing="ease-in-out"
+                className="md:w-[57.63%] space-y-[2.4rem]"
+                onSubmit={handleSubmit}
+              >
+                <input
+                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
+                  type="text"
+                  placeholder="Name"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+                <input
+                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
+                  type="text"
+                  placeholder="Email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <input
+                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
+                  type="tel"
+                  placeholder="Phone"
+                  id="phone"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+                <input
+                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
+                  type="text"
+                  placeholder="Company"
+                  id="company"
+                  value={company}
+                  onChange={(e) => setCompany(e.target.value)}
+                />
+                <textarea
+                  className="border-[.1rem] border-white w-[100%] bg-black bg-transparent h-[24rem] text-[1.6rem] p-[3.2rem]"
+                  placeholder="Tell us about the project"
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                ></textarea>
+                <button className="flex items-center w-[100%] xl:w-[40%] justify-end mx-auto relative">
+                  <div className="flex items-center absolute">
+                    <h3 className="w-[100%] text-[2.4rem] mr-[4.8rem]">
+                      Send <span className="text-red">Message</span>
+                    </h3>
+                    <svg className="h-[2.4rem] w-[2.4rem]">
+                      <use href="/images/sprite.svg#icon-arrow" />
+                    </svg>
+                  </div>
+                  <div className="h-[16rem] w-[16rem] bg-white rounded-[100%]"></div>
+                </button>
+              </form>
+            </div>
+          </Container>
+        </section>
+      </Layout>
+      <Success toggle={toggle} className={open ? '' : 'hidden'} />
+    </>
   );
 }
 

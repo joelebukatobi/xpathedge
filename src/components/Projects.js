@@ -26,9 +26,9 @@ export default function Projects({ project }) {
       onMouseOut={handleMouseOut}
       onMouseOver={handleMouseOver}
     >
-      <div className="h-[44.8rem] md:h-[60rem] w-[100%] bg-zicron relative">
+      <div className="w-[100%] bg-zicron relative">
         <div className="h-[100] w-[100]  overflow-hidden">
-          <img src={project.attributes.image.data.attributes.formats.small.url} alt="" className="h-[100%] w-[100%]" />
+          <img src={project.attributes.image.data.attributes.formats.small.url} alt="" className="w-[100%]" />
         </div>
         {active && (
           <div

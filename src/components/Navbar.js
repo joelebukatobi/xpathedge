@@ -50,7 +50,7 @@ export default function Navbar({ footer }) {
                 <p className="text-[1.6rem] md:hidden">Follow Us:</p>
                 <ul className="flex gap-x-[3.2rem] md:gap-x-[10.4rem] gap-y-[4rem] flex-wrap" cursor-class="overlay">
                   <li className="text-[2rem] md:w-[15%]">
-                    <Link href="">LinkedIn</Link>
+                    <Link href={footer.attributes.linked}>LinkedIn</Link>
                   </li>
                   <li className="text-[2rem] md:w-[15%]">
                     <Link href={footer.attributes.twitter}>Twitter</Link>

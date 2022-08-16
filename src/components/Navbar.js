@@ -17,9 +17,10 @@ export default function Navbar({ footer }) {
                 src="/images/icon-logo.svg"
                 className="h-[6.16rem] w-[7.76rem] md:h-[8.8rem] md:w-[10.4rem] cursor-pointer"
                 alt=""
+                cursor-class="no-border"
               />
             </Link>
-            <div onClick={toggle} className="flex items-center cursor-pointer">
+            <div onClick={toggle} className="flex items-center cursor-pointer" cursor-class="navmenu">
               <p className={open ? `hidden` : `font-medium text-[1.6rem] text-white text- mr-[.8rem]`}>Menu</p>
               <svg className="h-[2.4rem] w-[2.4rem] ">
                 <use href={open ? `/images/sprite.svg#icon-close` : `/images/sprite.svg#icon-menu`} />
@@ -41,13 +42,13 @@ export default function Navbar({ footer }) {
                   <svg className="h-[13.4rem] w-[11.3rem] cursor-pointer">
                     <use href="/images/sprite.svg#logo-large-transition" />
                   </svg>
-                  <div className="w-[71.59%] space-y-[1.6rem]">
+                  <div className="w-[71.59%] space-y-[1.6rem]" cursor-class="overlay">
                     <h4 className="text-[2.4rem] font-bold font-Mulish">{footer.attributes.email}</h4>
                     <h5 className="text-[2rem]">{footer.attributes.address}</h5>
                   </div>
                 </div>
                 <p className="text-[1.6rem] md:hidden">Follow Us:</p>
-                <ul className="flex gap-x-[3.2rem] md:gap-x-[10.4rem] gap-y-[4rem] flex-wrap">
+                <ul className="flex gap-x-[3.2rem] md:gap-x-[10.4rem] gap-y-[4rem] flex-wrap" cursor-class="overlay">
                   <li className="text-[2rem] md:w-[15%]">
                     <Link href="">LinkedIn</Link>
                   </li>
@@ -65,15 +66,10 @@ export default function Navbar({ footer }) {
                   </li>
                 </ul>
               </div>
-              <div className="relative h-[100%] flex items-center md:block md:h-auto ">
-                <div className="hidden md:block absolute h-[16rem] w-[16rem] bg-white rounded-[100%] top-[-6.3%] z-[-1] right-[72.5%]"></div>
+              <div className="relative h-[100%] flex items-center md:block md:h-auto " cursor-class="overlay">
                 <ul className="space-y-[4.8rem]">
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
-                    <Link href="/work" passHref>
-                      <a>
-                        <span className="md:text-black">Wo</span>rk
-                      </a>
-                    </Link>
+                    <Link href="/work">Work</Link>
                   </li>
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
                     <Link href="/about">About Us</Link>

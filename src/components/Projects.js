@@ -26,7 +26,7 @@ export default function Projects({ project }) {
       onMouseOut={handleMouseOut}
       onMouseOver={handleMouseOver}
     >
-      <div className="w-[100%] bg-zicron relative">
+      <div className="w-[100%] bg-zicron relative" cursor-class="no-border">
         <div className="h-[100] w-[100]  overflow-hidden">
           <img src={project.attributes.image.data.attributes.formats.small.url} alt="" className="w-[100%]" />
         </div>
@@ -44,7 +44,7 @@ export default function Projects({ project }) {
           </div>
         )}
       </div>
-      <div className="space-y-[1.6rem]">
+      <div className="space-y-[1.6rem]" cursor-class="overlay">
         <h4 className="text-[2.4rem] font-bold capitalize ">{project.attributes.name}</h4>
         <p className="text-[1.6rem]">{project.attributes.description}</p>
       </div>

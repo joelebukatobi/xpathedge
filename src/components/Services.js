@@ -13,7 +13,10 @@ export default function Services({ works }) {
   }, []);
   return (
     <Container>
-      <section className="pt-[10.4rem] pb-[16rem] space-y-[5.6rem] md:space-y-[16rem] lg:space-y-[7.2rem]">
+      <section
+        className="pt-[10.4rem] pb-[16rem] space-y-[5.6rem] md:space-y-[16rem] lg:space-y-[7.2rem]"
+        cursor-class="overlay"
+      >
         <div
           data-aos="fade-right"
           data-aos-duration="500"

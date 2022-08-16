@@ -145,13 +145,14 @@ export default function index({ footer }) {
       <Layout footer={footer} title={'xPathEdge | Contact'}>
         <section className="bg-black text-white pt-[16%] md:pt-[32%] lg:pt-[16%] pb-[5%]">
           <Container>
-            <h3 className="mt-[12vh] md:mt-[0] text-[2rem] uppercase fold-bold font-IBMPlexMono">
-              Let’s bring your ideas to life.
-            </h3>
-            <h1 className="text-[3.2rem] md:text-[6.4rem] lg:text-[8.8rem]  font-bold mb-[8rem] md:mb-[12rem] font-IBMPlexMono">
-              Get in touch.<span className="text-red">_</span>
-            </h1>
-
+            <div cursor-class="overlay">
+              <h3 className="mt-[12vh] md:mt-[0] text-[2rem] uppercase fold-bold font-IBMPlexMono">
+                Let’s bring your ideas to life.
+              </h3>
+              <h1 className="text-[3.2rem] md:text-[6.4rem] lg:text-[8.8rem]  font-bold mb-[8rem] md:mb-[12rem] font-IBMPlexMono">
+                Get in touch.<span className="text-red"></span>
+              </h1>
+            </div>
             <div className="flex flex-col space-y-[4rem] md:space-y-[0] md:flex-row justify-between">
               <p
                 data-aos="fade-right"
@@ -159,6 +160,7 @@ export default function index({ footer }) {
                 data-aos-delay="50"
                 data-aos-easing="ease-in-out"
                 className="md:w-[33.94%] text-[1.8rem]"
+                cursor-class="overlay"
               >
                 Our Team is geared towards solving even the most complex ideas. Talk to us about your needs
               </p>
@@ -167,11 +169,12 @@ export default function index({ footer }) {
                 data-aos-duration="500"
                 data-aos-delay="50"
                 data-aos-easing="ease-in-out"
-                className="md:w-[57.63%] space-y-[2.4rem]"
+                className="md:w-[57.63%]"
                 onSubmit={handleSubmit}
+                cursor-class="no-border"
               >
                 <input
-                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
+                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem] mb-[2.4rem]"
                   type="text"
                   placeholder="Name"
                   id="name"
@@ -180,7 +183,7 @@ export default function index({ footer }) {
                   required
                 />
                 <input
-                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
+                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem] mb-[2.4rem]"
                   type="text"
                   placeholder="Email"
                   id="email"
@@ -189,7 +192,7 @@ export default function index({ footer }) {
                   required
                 />
                 <input
-                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
+                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem] mb-[2.4rem]"
                   type="tel"
                   placeholder="Phone"
                   id="phone"
@@ -197,7 +200,7 @@ export default function index({ footer }) {
                   onChange={(e) => setPhone(e.target.value)}
                 />
                 <input
-                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem]"
+                  className="border-[.1rem] border-white w-[100%] outline-none bg-black bg-transparent h-[6.4rem] text-[1.6rem] px-[3.2rem] mb-[2.4rem]"
                   type="text"
                   placeholder="Company"
                   id="company"
@@ -205,22 +208,16 @@ export default function index({ footer }) {
                   onChange={(e) => setCompany(e.target.value)}
                 />
                 <textarea
-                  className="border-[.1rem] border-white w-[100%] bg-black bg-transparent h-[24rem] text-[1.6rem] p-[3.2rem]"
+                  className="border-[.1rem] border-white w-[100%] bg-black bg-transparent h-[24rem] text-[1.6rem] p-[3.2rem] mb-[2.4rem]"
                   placeholder="Tell us about the project"
                   id="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
-                <button className="flex items-center w-[100%] xl:w-[40%] justify-end mx-auto relative">
+                <button className="flex items-center w-[100%] xl:w-[40%] justify-end mx-auto relative h-[4.8rem] mt-[16rem]">
                   <div className="flex items-center absolute">
-                    <h3 className="w-[100%] text-[2.4rem] mr-[4.8rem]">
-                      Send <span className="text-red">Message</span>
-                    </h3>
-                    <svg className="h-[2.4rem] w-[2.4rem]">
-                      <use href="/images/sprite.svg#icon-arrow" />
-                    </svg>
+                    <h3 className="w-[100%] text-[2.4rem] mr-[4.8rem]">Send Message</h3>
                   </div>
-                  <div className="h-[16rem] w-[16rem] bg-white rounded-[100%]"></div>
                 </button>
               </form>
             </div>

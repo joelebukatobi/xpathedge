@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import Navbar from '@/components/Navbar';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -17,7 +18,11 @@ export default function Layout({ title, description, keywords, children, footer 
         <meta name="keywords" content={keywords} />
         <link rel="shortcut icon" href="/images/favicon.png" />
       </Head>
+      <Script src="/js/index.js" />
       <Navbar footer={footer} />
+      <div id="cursor">
+        <div className="cursor__circle"></div>
+      </div>
       {children}
       <Footer footer={footer} />
     </>

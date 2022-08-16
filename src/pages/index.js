@@ -33,6 +33,7 @@ export default function index({ services, projects, footer }) {
             data-aos-delay="50"
             data-aos-easing="ease-in-out"
             className="flex items-center space-x-[1.6rem] max-w-[114rem] w-[100%]"
+            cursor-class="overlay"
           >
             <p className="uppercase text-[1.6rem] md:text-[2.2rem] font-black tracking-[.8rem]">Projects</p>
             <hr className="h-[.2rem] w-[32rem] bg-black border-none" />

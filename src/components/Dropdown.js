@@ -24,6 +24,7 @@ export default function Dropdown({ className, options, name }) {
       data-aos-delay="100"
       data-aos-easing="ease-in-out"
       className={`${className} flex flex-col`}
+      cursor-class="overlay"
     >
       <button
         onClick={toggle}

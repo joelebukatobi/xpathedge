@@ -11,7 +11,7 @@ export default function Header({ heading, text, children, className }) {
   return (
     <section className={`${className} bg-black md:py-[24%] lg:py-[16%] lg:mt-[0] flex items-center text-white`}>
       <Container>
-        <div className="space-y-[6.4rem] md:space-y-[2.4rem]">
+        <div className="space-y-[6.4rem] md:space-y-[2.4rem]" cursor-class="overlay">
           <h1
             data-aos="fade-right"
             data-aos-duration="500"

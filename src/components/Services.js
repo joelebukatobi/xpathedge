@@ -37,7 +37,7 @@ export default function Services({ works }) {
           className="flex flex-wrap gap-y-[5.6rem] md:gap-y-[8rem]  justify-center lg:justify-between w-[100%]"
         >
           {works.map((service) => (
-            <div className="space-y-[.8rem] lg:space-y-[4.8rem] md:w-[75%] lg:w-[48%]">
+            <div className="space-y-[.8rem] lg:space-y-[4.8rem] md:w-[75%] lg:w-[48%]" key={service.id}>
               <h2 className="text-[2.2rem] md:text-[4rem] lg:text-[6.8rem] font-IBMPlexMono font-bold ">
                 {service.attributes.service}
               </h2>

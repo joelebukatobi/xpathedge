@@ -52,19 +52,19 @@ export default function Footer({ footer }) {
                 className="w-[100%] md:w-[38.6%] flex gap-x-[4rem] md:gap-x-[10.4rem] flex-wrap"
               >
                 <li className="text-[2rem] md:w-[15%]">
-                  <Link href={footer.attributes.linkedin}>LinkedIn</Link>
+                  <a href={`${footer.attributes.linkedin}`}>LinkedIn</a>
                 </li>
                 <li className="text-[2rem] md:w-[15%]">
-                  <Link href={footer.attributes.twitter}>Twitter</Link>
+                  <a href={`${footer.attributes.twitter}`}>Twitter</a>
                 </li>
                 <li className="text-[2rem] md:w-[15%]">
-                  <Link href={footer.attributes.behance}>Behance</Link>
+                  <a href={`${footer.attributes.behance}`}>Behance</a>
                 </li>
                 <li className="text-[2rem] md:w-[15%]">
-                  <Link href={footer.attributes.instagram}>Instagram</Link>
+                  <a href={`${footer.attributes.instagram}`}>Instagram</a>
                 </li>
                 <li className="text-[2rem] md:w-[15%]">
-                  <Link href={footer.attributes.facebook}>Facebook</Link>
+                  <a href={`${footer.attributes.facebook}`}>Facebook</a>
                 </li>
               </ul>
             </div>

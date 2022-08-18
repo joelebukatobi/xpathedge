@@ -46,7 +46,7 @@ export default function index({ services, projects, footer }) {
             className="flex flex-wrap justify-center lg:justify-between gap-y-[8rem]  max-w-[114rem]"
           >
             {projects.map((project) => {
-              return <Project project={project} />;
+              return <Project project={project} key={project.id} />;
             })}
           </div>
           <div className="flex justify-center w-[100%]">
@@ -97,6 +97,7 @@ export async function getServerSideProps() {
     fetch(`${API_URL}/api/contact`),
   ]);
   const info = await Promise.all(res.map((res) => res.json()));
+  console.log(info[1].data);
   return {
     props: {
       services: info[0].data,

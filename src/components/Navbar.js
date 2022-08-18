@@ -50,19 +50,19 @@ export default function Navbar({ footer }) {
                 <p className="text-[1.6rem] md:hidden">Follow Us:</p>
                 <ul className="flex gap-x-[3.2rem] md:gap-x-[10.4rem] gap-y-[4rem] flex-wrap" cursor-class="overlay">
                   <li className="text-[2rem] md:w-[15%]">
-                    <Link href={footer.attributes.linked}>LinkedIn</Link>
+                    <a href={`${footer.attributes.linkedin}`}>LinkedIn</a>
                   </li>
                   <li className="text-[2rem] md:w-[15%]">
-                    <Link href={footer.attributes.twitter}>Twitter</Link>
+                    <a href={`${footer.attributes.twitter}`}>Twitter</a>
                   </li>
                   <li className="text-[2rem] md:w-[15%]">
-                    <Link href={footer.attributes.behance}>Behance</Link>
+                    <a href={`${footer.attributes.behance}`}>Behance</a>
                   </li>
                   <li className="text-[2rem] md:w-[15%]">
-                    <Link href={footer.attributes.instagram}>Instagram</Link>
+                    <a href={`${footer.attributes.instagram}`}>Instagram</a>
                   </li>
                   <li className="text-[2rem] md:w-[15%]">
-                    <Link href={footer.attributes.facebook}>Facebook</Link>
+                    <a href={`${footer.attributes.facebook}`}>Facebook</a>
                   </li>
                 </ul>
               </div>

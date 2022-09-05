@@ -62,7 +62,7 @@ export async function getServerSideProps() {
   );
   const res = await Promise.all([fetch(`${API_URL}/api/projects?${query}`), fetch(`${API_URL}/api/contact`)]);
   const info = await Promise.all(res.map((res) => res.json()));
-  console.log(res);
+  // console.log(res);
   return {
     props: {
       projects: info[0].data,

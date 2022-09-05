@@ -67,7 +67,7 @@ export default function index({ services, projects, footer }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const query = qs.stringify(
     {
       populate: ['*'],

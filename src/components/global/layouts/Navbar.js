@@ -16,8 +16,8 @@ export default function Navbar({ contact }) {
           <div className="flex items-center justify-between h-[8.8vh]">
             <Link href="/">
               <img
-                src="/images/icon-logo.svg"
-                className="h-[6.16rem] w-[7.76rem] md:h-[8.8rem] md:w-[10.4rem]  ml-[-.4rem] lg:ml-0 cursor-pointer"
+                src="/images/icon-logo.png"
+                className="h-[5.6rem] w-[7.76rem] md:h-[7.2rem] md:w-[10.4rem]  ml-[-.4rem] lg:ml-0 cursor-pointer"
                 alt=""
                 cursor-class="no-border"
               />

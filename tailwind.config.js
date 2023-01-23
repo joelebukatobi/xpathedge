@@ -1,3 +1,4 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -9,9 +10,9 @@ module.exports = {
       xl: '1440px',
     },
     fontFamily: {
-      Mulish: ['Mulish', 'sans-serif'],
-      IBMPlexMono: ['IBM Plex Mono', 'monospace'],
-      DMSans: ['DM Sans', 'sans-serif'],
+      Mulish: ['var(--mulish-font)', ...fontFamily.sans],
+      IBMPlexMono: ['var(--ibm-plex-mono-font)', ...fontFamily.sans],
+      DMSans: ['var(--dm-sans-font)', ...fontFamily.sans],
     },
     // colors: {
     //   white: '#ffffff',

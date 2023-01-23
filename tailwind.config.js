@@ -11,6 +11,7 @@ module.exports = {
     fontFamily: {
       Mulish: ['Mulish', 'sans-serif'],
       IBMPlexMono: ['IBM Plex Mono', 'monospace'],
+      DMSans: ['DM Sans', 'sans-serif'],
     },
     // colors: {
     //   white: '#ffffff',

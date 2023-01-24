@@ -51,7 +51,7 @@ export default function index({ services, projects, contact }) {
           </div>
           <div className="flex justify-center w-[100%]">
             <div className="flex items-center space-x-[1.6rem]">
-              <p className="text-[1.8rem]">
+              <p className="text-[1.8rem]" cursor-class="navmenu">
                 <Link href="/work">View More</Link>
               </p>
               <svg className="w-[2.4rem] h-[2.4rem]">

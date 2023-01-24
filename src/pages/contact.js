@@ -125,7 +125,10 @@ export default function index({ contact }) {
                   onChange={(e) => setMessage(e.target.value)}
                   required
                 ></textarea>
-                <button className="flex justify-end items-center w-[100%] h-[4.8rem] mt-[4rem] text-[2.4rem] cursor-pointer">
+                <button
+                  className="flex justify-end items-center w-[100%] h-[4.8rem] mt-[4rem] text-[2.4rem] cursor-pointer"
+                  cursor-class="navmenu"
+                >
                   Send Message
                 </button>
               </form>

@@ -33,7 +33,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>Admin | Xpathedge</title>
+        <title>Admin | xPathEdge</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
       </Head>
       <div id="admin">

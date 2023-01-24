@@ -14,14 +14,14 @@ export default function Navbar({ contact }) {
           className={open ? `h-[100vh] [w-100%] px-[3.2rem] py-[.8rem]` : `px-[3.2rem] h-[auto] w-[100%] py-[.8rem]`}
         >
           <div className="flex items-center justify-between h-[8.8vh]">
-            <Link href="/">
+            <a href="/">
               <img
                 src="/images/icon-logo.png"
-                className="h-[5.6rem] w-[7.76rem] md:h-[7.2rem] md:w-[10.4rem]  ml-[-.4rem] lg:ml-0 cursor-pointer"
+                className="h-[5.6rem] w-[7.76rem] md:h-[6.4rem] md:w-[9.6rem]  ml-[-.4rem] lg:ml-0 cursor-pointer"
                 alt=""
                 cursor-class="no-border"
               />
-            </Link>
+            </a>
             <div onClick={toggle} className="flex items-center cursor-pointer" cursor-class="navmenu">
               <p className={open ? `hidden` : `font-medium text-[1.6rem] text-white text- mr-[.8rem]`}>Menu</p>
               <svg className="h-[2.4rem] w-[2.4rem]">
@@ -71,16 +71,16 @@ export default function Navbar({ contact }) {
               <div className="relative h-[100%] flex items-center md:block md:h-auto " cursor-class="overlay">
                 <ul className="space-y-[4.8rem]">
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
-                    <Link href="/work">Work</Link>
+                    <a href="/work">Work</a>
                   </li>
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
-                    <Link href="/about">About Us</Link>
+                    <a href="/about">About Us</a>
                   </li>
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
-                    <Link href="/careers">Career </Link>
+                    <a href="/careers">Career </a>
                   </li>
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
-                    <Link href="/contact">Contact</Link>
+                    <a href="/contact">Contact</a>
                   </li>
                 </ul>
               </div>

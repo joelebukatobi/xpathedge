@@ -17,7 +17,7 @@ export default function Layout({ title, description, keywords, children, contact
         <meta name="keywords" content={keywords} />
         <link rel="shortcut icon" href="/images/favicon.png" />
       </Head>
-      <Script src="/js/index.js" />
+      <Script src="https://www.xpathedge.com/js/index.js" />
       <Navbar contact={contact} />
       <div id="cursor">
         <div className="cursor__circle"></div>

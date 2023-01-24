@@ -74,7 +74,6 @@ export async function getServerSideProps() {
     fetch(`${API_URL}/api/contact/xpathedge`),
   ]);
   const data = await Promise.all(res.map((res) => res.json()));
-  console.log(data[1]);
   return {
     props: {
       services: data[0].services,

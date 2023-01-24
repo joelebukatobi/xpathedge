@@ -9,7 +9,6 @@ import { userLogout } from '@/features///user/userActions';
 
 export default function Sidebar({ user }) {
   // State
-  console.log(user);
   const [open, setOpen] = useState(false);
   //
   const pathname = useRouter().pathname;

@@ -10,7 +10,6 @@ import { API_URL } from '@/config/index';
 const qs = require('qs');
 
 import { SMTP_PASSWORD, SMTP_USERNAME } from '@/config//index';
-console.log(SMTP_PASSWORD, SMTP_USERNAME);
 
 export default function index({ contact }) {
   const [name, setName] = useState('');

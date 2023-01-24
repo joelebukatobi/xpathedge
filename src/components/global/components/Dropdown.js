@@ -15,7 +15,6 @@ export default function Dropdown({ className, options, name }) {
   const onOptionClicked = (value) => () => {
     setOption(value);
     setOpen(false);
-    console.log(option);
   };
   return (
     <div

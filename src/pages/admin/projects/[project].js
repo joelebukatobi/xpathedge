@@ -36,7 +36,7 @@ export default function index({ project, token }) {
     const body = new FormData();
     body.append('name', name);
     body.append('description', description);
-    body.append('image', image);
+    body.append('new_image', image);
     body.append('link', link);
 
     const res = await fetch(`${API_URL}/api/projects/${project.slug}`, {
@@ -110,7 +110,7 @@ export default function index({ project, token }) {
             type={'file'}
             onChange={(e) => imageChange(e.target.files)}
             required={'required'}
-            after={`${content.substring(0, 35)}...` || 'Upload an image'}
+            after={content ? `${content.substring(0, 35)}...` : 'Upload an image'}
             className={'mb-[2.4rem] '}
             classInput={
               'relative after:content-[attr(after)] after:bg-white after:h-full after:w-full after:absolute after:top-0  after:left-[1.6rem] after:z-10 after:flex after:items-center after:font-light after:text-[#b9bec7]'
@@ -143,7 +143,6 @@ export async function getServerSideProps({ req, query: { project } }) {
     },
   });
   const data = await res.json();
-  console.log(data);
   return {
     props: {
       token,

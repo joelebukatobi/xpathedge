@@ -204,7 +204,6 @@ export async function getServerSideProps({ req, query: { profile } }) {
     },
   });
   const data = await res.json();
-  console.log(data.user);
   return {
     props: {
       token,

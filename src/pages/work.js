@@ -45,7 +45,6 @@ export default function index({ heading, projects, contact }) {
 export async function getServerSideProps() {
   const res = await Promise.all([fetch(`${API_URL}/api/projects`), fetch(`${API_URL}/api/contact/xpathedge`)]);
   const data = await Promise.all(res.map((res) => res.json()));
-  // console.log(res);
   return {
     props: {
       projects: data[0].projects,

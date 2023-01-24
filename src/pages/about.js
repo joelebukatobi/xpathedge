@@ -110,7 +110,6 @@ export default function index({ heading, text, contact, services }) {
 export async function getServerSideProps() {
   const res = await Promise.all([fetch(`${API_URL}/api/services`), fetch(`${API_URL}/api/contact/xpathedge`)]);
   const data = await Promise.all(res.map((res) => res.json()));
-  // console.log(res);
   return {
     props: {
       services: data[0].services,

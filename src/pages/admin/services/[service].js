@@ -104,7 +104,6 @@ export async function getServerSideProps({ req, query: { service } }) {
     },
   });
   const data = await res.json();
-  console.log(data);
   return {
     props: {
       token,

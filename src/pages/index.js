@@ -67,7 +67,7 @@ export default function index({ services, projects, contact }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await Promise.all([
     fetch(`${API_URL}/api/services`),
     fetch(`${API_URL}/api/projects`),

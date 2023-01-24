@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 // Next JS
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 // Components
 import Navbar from '@/admin//layouts/Navbar';
 import Body from '@/admin//layouts/Body';
@@ -30,16 +31,22 @@ export default function Layout({ children }) {
   }, []);
 
   return (
-    <div id="admin">
-      {user ? (
-        <>
-          <Navbar user={user} />
-          <Sidebar user={user} />
-          <Body>{children}</Body>
-        </>
-      ) : (
-        <Loading />
-      )}
-    </div>
+    <>
+      <Head>
+        <title>Admin | Xpathedge</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+      </Head>
+      <div id="admin">
+        {user ? (
+          <>
+            <Navbar user={user} />
+            <Sidebar user={user} />
+            <Body>{children}</Body>
+          </>
+        ) : (
+          <Loading />
+        )}
+      </div>
+    </>
   );
 }

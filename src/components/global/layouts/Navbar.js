@@ -39,7 +39,7 @@ export default function Navbar({ contact }) {
         >
           <Container className={'h-[100%] w-[100%]'}>
             <div className="flex flex-col-reverse md:flex-row md:items-center h-[100%] w-[100%] justify-between ">
-              <div className="md:w-[38.59%] space-y-[3.2rem] md:space-y-[8rem] xl:space-y-[16rem] mt-[4rem] md:mt-[0]">
+              <div className="md:w-[38.59%] space-y-[3.2rem] md:space-y-[4rem] xl:space-y-[16rem] mt-[4rem] md:mt-[0]">
                 <div className="hidden md:block space-y-[5.6rem]">
                   <svg className="h-[13.4rem] w-[11.3rem] cursor-pointer">
                     <use href="/images/sprite.svg#logo-large-transition" />
@@ -47,6 +47,7 @@ export default function Navbar({ contact }) {
                   <div className="w-[71.59%] space-y-[1.6rem]" cursor-class="overlay">
                     <h4 className="text-[2.4rem] font-bold font-Mulish">{contact.email}</h4>
                     <h5 className="text-[2rem]">{contact.address}</h5>
+                    <h5 className="text-[2rem]">+1 (469) 918-4632</h5>
                   </div>
                 </div>
                 <p className="text-[1.6rem] md:hidden">Follow Us:</p>
@@ -69,7 +70,7 @@ export default function Navbar({ contact }) {
                 </ul>
               </div>
               <div className="relative h-[100%] flex items-center md:block md:h-auto " cursor-class="overlay">
-                <ul className="space-y-[4.8rem]">
+                <ul className="space-y-[1.6rem] xl:space-y-[4.8rem]">
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
                     <a href="/work">Work</a>
                   </li>

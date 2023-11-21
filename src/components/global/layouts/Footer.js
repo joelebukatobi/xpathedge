@@ -43,6 +43,7 @@ export default function Footer({ contact }) {
               >
                 <h4 className="text-[2.4rem] font-bold font-Mulish">{contact.email}</h4>
                 <h5 className="text-[2rem]">{contact.address}</h5>
+                <h5 className="text-[2rem]">+1 (469) 918-4632</h5>
               </div>
               <ul
                 data-aos="fade-up"

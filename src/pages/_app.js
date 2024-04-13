@@ -16,14 +16,14 @@ const ibm_plex_mono = IBM_Plex_Mono({
   variable: '--font-ibm-plex-mono',
   display: 'optional',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['200', '300', '400', '500', '600', '700'],
 });
 
 const mulish = Mulish({
   variable: '--font-ibm-plex-mono',
   display: 'optional',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '900'],
+  weight: ['200', '300', '400', '500', '600', '700', '900'],
 });
 
 function MyApp({ Component, pageProps }) {

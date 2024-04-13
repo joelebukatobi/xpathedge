@@ -20,6 +20,7 @@ export default function Projects({ project }) {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <div
       className="space-y-[4.8rem] md:w-[75%] lg:w-[44.56%]"

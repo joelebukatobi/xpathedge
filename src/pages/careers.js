@@ -16,17 +16,17 @@ export default function index({ careers, contact }) {
       ></Header>
 
       <div className="w-100 h-[72rem] pt-[8rem] pb-[9.6rem] bg-[#191919] flex align-center justify-center gap-x-[4rem] overflow-hidden">
-        <div className="w-[22.43%]">
-          <img className="h-[100%]" src="/images/career-img-one.png" alt="" />
+        <div className="w-[20%] h-[100%]">
+          <img className="h-[100%] w-[100%]" src="/images/career-img-one.png" alt="" />
         </div>
-        <div className="w-[52.36%] overflow-hidden">
-          <img className=" w-[100%]" src="/images/career-img-two.png" alt="" />
+        <div className="w-[52.36%] h-[100%] overflow-hidden">
+          <img className="w-[100%]" src="/images/career-img-two.png" alt="" />
         </div>
-        <div className="w-[22.43%]">
-          <img className="h-[100%]" src="/images/career-img-three.png" alt="" />
+        <div className="w-[20%] h-[100%]">
+          <img className="h-[100%] w-[100%]" src="/images/career-img-three.png" alt="" />
         </div>
       </div>
-      {careers.length !== 0 ? (
+      {careers.length === 0 ? (
         <div className="bg-[#191919] pt-[16rem] pb-[4rem]">
           <Container>
             <div className="w-[80.96%]">
@@ -34,7 +34,7 @@ export default function index({ careers, contact }) {
                 We're thrilled you're interested in joining our team at xPathEdge!
               </p>
               <h2 className="text-[4.8rem] font-IBMPlexMono text-white tracking-[-.24rem]">
-                We're thrilled you're interested in joining our team at XpathEdge!
+                Unfortunately, we don't have any open positions at the moment.
               </h2>
             </div>
           </Container>

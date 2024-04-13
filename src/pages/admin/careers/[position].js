@@ -23,7 +23,7 @@ export default function index({ position, token }) {
   // Handles submit for the form
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch(`${API_URL}/api/careers/${position.slug}`, {
+    const res = await fetch(`${API_URL}/api/careers${position.slug}`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,

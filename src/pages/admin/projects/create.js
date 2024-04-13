@@ -39,7 +39,7 @@ export default function index({ token }) {
     body.append('image', image);
     body.append('link', link);
 
-    const res = await fetch(`${API_URL}/api/projects/`, {
+    const res = await fetch(`${API_URL}/api/projects`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,

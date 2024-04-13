@@ -37,7 +37,7 @@ export default function index({ token }) {
     body.append('title', title);
     body.append('image', image);
 
-    const res = await fetch(`${API_URL}/api/teams/`, {
+    const res = await fetch(`${API_URL}/api/teams`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,

@@ -30,7 +30,7 @@ export default function index({ services, token }) {
           <h3 className="text-black/90 mr-[1.6rem]">Services</h3>
           <div className="tag">
             <p>
-              <Link href="/admin/services/create/">Create New</Link>
+              <Link href="/admin/services/create">Create New</Link>
             </p>
           </div>
         </header>

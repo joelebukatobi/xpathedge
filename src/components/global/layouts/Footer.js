@@ -1,37 +1,48 @@
 import { useEffect } from 'react';
-import Container from '@/global//layouts/Container';
-import Link from 'next/link';
-import AOS from 'aos';
 
+// Next JS
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+// Components
+import Container from '@/global//layouts/Container';
+
+// AOS
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function Footer({ contact }) {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  const pathname = useRouter().pathname;
   return (
     <>
       <section className=" h-full bg-[#191919] text-white pt-[12rem] pb-[10.4rem]">
         <Container className={'h-[80%] xl:h-[100%] flex flex-col justify-between'}>
-          <div
-            data-aos="fade-right"
-            data-aos-duration="500"
-            data-aos-delay="50"
-            data-aos-easing="ease-in-out"
-            className="lg:w-[60%] mb-[10.4rem]"
-          >
-            <h3 className="text-[3.2rem] md:text-[5.8rem] font-bold font-IBMPlexMono" cursor-class="overlay">
-              Have an idea you’d want to execute?
-            </h3>
-            <div className="flex items-center space-x-[1.6rem]">
-              <h4 className="text-[2.4rem]">
-                <Link href="/contact">Lets get started</Link>
-              </h4>
-              <svg className="w-[2.4rem] h-[2.4rem]">
-                <use href="/images/sprite.svg#icon-arrow" />
-              </svg>
+          {pathname === '/careers' || pathname === '/contact' ? null : (
+            <div
+              data-aos="fade-right"
+              data-aos-duration="500"
+              data-aos-delay="50"
+              data-aos-easing="ease-in-out"
+              className="lg:w-[60%] mb-[10.4rem]"
+            >
+              <h3 className="text-[3.2rem] md:text-[5.8rem] font-bold font-IBMPlexMono" cursor-class="overlay">
+                Have an idea you’d want to execute?
+              </h3>
+              <div className="flex items-center space-x-[1.6rem]">
+                <h4 className="text-[2.4rem]">
+                  <Link href="/contact">Lets get started</Link>
+                </h4>
+                <svg className="w-[2.4rem] h-[2.4rem]">
+                  <use href="/images/sprite.svg#icon-arrow" />
+                </svg>
+              </div>
             </div>
-          </div>
+          )}
+
           <div className="" cursor-class="overlay">
             <div className="flex flex-col mb-[4rem] lg:mb-[8rem] md:flex-row justify-between">
               <div

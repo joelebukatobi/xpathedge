@@ -8,7 +8,7 @@ export default function Navbar({ contact }) {
     setOpen(!open);
   };
   return (
-    <Container className={'max-w-[100vw] fixed top-[0rem] z-[50] py-[1.6vh] bg-black  px-[0]'}>
+    <Container className={'max-w-[100vw] fixed top-[0rem] z-[50] py-[1.6vh] bg-[#191919]  px-[0]'}>
       <Container className={'max-width w-[100%] px-[0]'}>
         <section
           className={open ? `h-[100vh] [w-100%] px-[3.2rem] py-[.8rem]` : `px-[3.2rem] h-[auto] w-[100%] py-[.8rem]`}
@@ -72,7 +72,7 @@ export default function Navbar({ contact }) {
               <div className="relative h-[100%] flex items-center md:block md:h-auto " cursor-class="overlay">
                 <ul className="space-y-[1.6rem] xl:space-y-[4.8rem]">
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
-                    <a href="/work">Work</a>
+                    <a href="/works">Work</a>
                   </li>
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
                     <a href="/about">About Us</a>

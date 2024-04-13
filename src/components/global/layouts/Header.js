@@ -9,7 +9,7 @@ export default function Header({ heading, text, children, className }) {
     AOS.init();
   }, []);
   return (
-    <section className={`${className} bg-black md:py-[24%] lg:py-[16%] lg:mt-[0] flex items-center text-white`}>
+    <section className={` bg-[#191919] md:py-[24%] lg:py-[16%] lg:mt-[0] flex items-center text-white ${className}`}>
       <Container>
         <div className="space-y-[6.4rem] md:space-y-[2.4rem]" cursor-class="overlay">
           <h1

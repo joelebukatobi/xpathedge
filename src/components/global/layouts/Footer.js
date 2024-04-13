@@ -11,7 +11,7 @@ export default function Footer({ contact }) {
   }, []);
   return (
     <>
-      <section className=" h-full bg-black text-white pt-[12rem] pb-[10.4rem]">
+      <section className=" h-full bg-[#191919] text-white pt-[12rem] pb-[10.4rem]">
         <Container className={'h-[80%] xl:h-[100%] flex flex-col justify-between'}>
           <div
             data-aos="fade-right"
@@ -59,13 +59,7 @@ export default function Footer({ contact }) {
                   <a href={`${contact.twitter}` ?? ''}>Twitter</a>
                 </li>
                 <li className="text-[2rem] md:w-[15%] mb-[.8rem]">
-                  <a href={`${contact.behance}` ?? ''}>Behance</a>
-                </li>
-                <li className="text-[2rem] md:w-[15%] mb-[.8rem]">
                   <a href={`${contact.instagram}` ?? ''}>Instagram</a>
-                </li>
-                <li className="text-[2rem] md:w-[15%] mb-[.8rem]">
-                  <a href={`${contact.facebook}` ?? ''}>Facebook</a>
                 </li>
               </ul>
             </div>

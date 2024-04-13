@@ -12,7 +12,7 @@ export default function Career({ careers }) {
 
   const options = ['design', 'engineering', 'operations'];
   return (
-    <section className="bg-black text-white">
+    <section className="bg-[#191919] text-white">
       <Container>
         <section className="space-y-[3.2rem] md:space-y-[12rem] pb-[10%] relative">
           <Dropdown name={'All'} options={options} />

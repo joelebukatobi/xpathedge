@@ -51,7 +51,7 @@ export default function index({ contact }) {
   return (
     <>
       <Layout contact={contact} title={'xPathEdge | Contact'}>
-        <section className="bg-black text-white pt-[16%] md:pt-[32%] lg:pt-[16%] pb-[5%]">
+        <section className="bg-[#191919] text-white pt-[16%] md:pt-[32%] lg:pt-[16%] pb-[5%]">
           <Container>
             <div cursor-class="overlay">
               <h3 className="mt-[12vh] md:mt-[0] text-[2rem] uppercase fold-bold font-IBMPlexMono">
@@ -130,6 +130,9 @@ export default function index({ contact }) {
                   cursor-class="navmenu"
                 >
                   Send Message
+                  <svg className="ml-[1.6rem] w-[2.4rem] h-[1.6rem]">
+                    <use href={`/images/sprite.svg#icon-arrow-slim`} />
+                  </svg>
                 </button>
               </form>
             </div>

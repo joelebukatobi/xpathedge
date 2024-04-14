@@ -18,7 +18,8 @@ export default function index({ heading, projects, contact }) {
   return (
     <Layout contact={contact} title={'xPathEdge | Work'}>
       <Header
-        heading={'Let’s create great things together'}
+        heading={`
+        We’ve been busy, creating magic.`}
         className={'mt-[10vh] pt-[5.6rem] pb-[4rem] md:pb-[8rem] lg:pb-[8rem]'}
       ></Header>
       <section className="bg-[#191919] text-white">

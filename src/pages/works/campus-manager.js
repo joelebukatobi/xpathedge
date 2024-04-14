@@ -108,11 +108,11 @@ export default function index({ careers, contact }) {
         </section>
       </Container>
 
-      <section className="py-[20rem] flex gap-x-[7.2rem] overflow-hidden w-100">
-        <p className="text-[14.8rem] italic font-[200]">
+      <section className="py-[20rem] flex  justify-between gap-x-[4rem] overflow-hidden w-[100%]">
+        <p className="text-[14.8rem] italic font-[200] w-[100%]">
           Next <span className="font-medium">Project</span>
         </p>
-        <p className="text-[14.8rem] italic font-[200]">
+        <p className="text-[14.8rem] italic font-[200] w-[100%]">
           Next <span className="font-medium">Project</span>
         </p>
       </section>

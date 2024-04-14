@@ -17,7 +17,7 @@ export default function index({ heading, text, contact, services, teams }) {
   }, []);
   return (
     <Layout contact={contact} title={'xPathEdge | About'}>
-      <Header heading={`Together, let's create magic`} className={'mt-[10vh] pt-[5.6rem] pb-[8rem]'}>
+      <Header heading={`Let’s create magic, together`} className={'mt-[10vh] pt-[5.6rem] pb-[8rem]'}>
         <div
           data-aos="fade-up"
           data-aos-duration="500"
@@ -27,8 +27,9 @@ export default function index({ heading, text, contact, services, teams }) {
         >
           <h5 className="text-[1.8rem] uppercase  font-bold tracking-[.8rem]">our mission</h5>
           <p className="text-[1.6rem] md:text-[2.4rem] md:w-[56.49%]">
-            We believe every organization should have a competitive edge for increased value. We collaborate with you to
-            deliver quality work while helping you achieve a competitive advantage in your industry.
+            We believe every organisation is unique in its way and deserves an expert edge if it is to deliver any
+            value. Our goal is to deliver excellence both in ideation and implementation, collaborate uniquely, and
+            create tailored-made solutions to help our clients realise their desired goals.
           </p>
         </div>
       </Header>
@@ -74,8 +75,9 @@ export default function index({ heading, text, contact, services, teams }) {
                     </svg>
                   </div>
                   <p className="text-[1.8rem]">
-                    Our team comprises the most experienced professionals poised to deliver tailor-made solutions to
-                    your business at all times
+                    <strong>Integrity:</strong>
+                    <br />
+                    At xPathEdge, we ensure honest and fair deals with our clients.
                   </p>
                 </li>
                 <li className="flex space-x-[3.2rem]">
@@ -85,8 +87,10 @@ export default function index({ heading, text, contact, services, teams }) {
                     </svg>
                   </div>
                   <p className="text-[1.8rem]">
-                    We offer various unique services to suit your every need. We are committed to building long-lasting
-                    relationships and ensuring you remain top of mind at all times.
+                    <strong>Professionalism:</strong>
+                    <br />
+                    We ensure innovation in product and service delivery so that our customers have the latest and up to
+                    date technology.
                   </p>
                 </li>
                 <li className="flex space-x-[3.2rem]">
@@ -96,8 +100,49 @@ export default function index({ heading, text, contact, services, teams }) {
                     </svg>
                   </div>
                   <p className="text-[1.8rem]">
-                    Our mission to create a competitive edge for you remains unwavering and this is evident in our
-                    commitment to ensuring your business objectives are always met.
+                    <strong>Effictiveness:</strong>
+                    <br />
+                    We ensure that our services are valuable, effective, and efficient.
+                  </p>
+                </li>
+                <li className="flex space-x-[3.2rem]">
+                  <div className="h-[2.8rem] w-[2.8rem] rounded-[100%] bg-[#AA0000] flex items-center justify-center">
+                    <svg className="h-[3.2rem] w-[3.2rem]">
+                      <use href="/images/sprite.svg#icon-check" />
+                    </svg>
+                  </div>
+                  <p className="text-[1.8rem]">
+                    <strong>Timeliness:</strong>
+                    <br />
+                    We ensure we meet deadlines in discharging our assigned duties to assure prompt service delivery
+                    without compromising on quality.
+                  </p>
+                </li>
+                <li className="flex space-x-[3.2rem]">
+                  <div className="h-[2.8rem] w-[2.8rem] rounded-[100%] bg-[#AA0000] flex items-center justify-center">
+                    <svg className="h-[3.2rem] w-[3.2rem]">
+                      <use href="/images/sprite.svg#icon-check" />
+                    </svg>
+                  </div>
+                  <p className="text-[1.8rem]">
+                    <strong>Respect:</strong>
+                    <br />
+                    We highly regard the wishes of our clients in the process of delivering our products and services to
+                    them. We also treat our clients with the courtesy and appreciation they deserve in every
+                    interaction.
+                  </p>
+                </li>
+                <li className="flex space-x-[3.2rem]">
+                  <div className="h-[2.8rem] w-[2.8rem] rounded-[100%] bg-[#AA0000] flex items-center justify-center">
+                    <svg className="h-[3.2rem] w-[3.2rem]">
+                      <use href="/images/sprite.svg#icon-check" />
+                    </svg>
+                  </div>
+                  <p className="text-[1.8rem]">
+                    <strong>Sustainability:</strong>
+                    <br />
+                    We ensure that the products and services we provide our clients are poised to achieve the global
+                    Sustainable Development Goals (SDGs) that align with their organisational objectives.
                   </p>
                 </li>
               </ul>
@@ -129,7 +174,10 @@ export default function index({ heading, text, contact, services, teams }) {
               <div className="md:w-[24.71%]">
                 <p className="text-[1.8rem]">
                   Our team comprises the most experienced professionals poised to always deliver tailor-made solutions
-                  to your business.
+                  to your business. Our team members are located in the United States of America, Nigeria and the United
+                  Kingdom. Their expertise collectively spans over 20 years in Software Engineering and Development, Web
+                  design and development, UI/UX design, Digital Marketing, Procurement, Supply Chain, and Business
+                  Development.
                 </p>
               </div>
               <div className="w-[21.73%] border-l-[.2rem] border-[#333333] pl-[4rem]">

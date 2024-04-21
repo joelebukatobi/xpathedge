@@ -21,13 +21,13 @@ export default function index({ careers, contact }) {
       <section className="bg-[#191919] pt-[8rem]">
         <Container className={'flex justify-between'}>
           <div className="w-[19.10%]">
-            <ul className="space-y-[.8rem]">
+            <ul className="hidden lg:block space-y-[.8rem]">
               <li className="text-[#979797] text-[2rem]">Company Description</li>
               <li className="text-[#979797] text-[2rem]">Role</li>
               <li className="text-[#979797] text-[2rem]">Responsiblities</li>
               <li className="text-[#979797] text-[2rem]">About You</li>
             </ul>
-            <div className="flex items-center space-x-[1.6rem] mt-[5.6rem]">
+            <div className="hidden lg:flex items-center space-x-[1.6rem] mt-[5.6rem]">
               <h4 className="text-[1.8rem] text-white">
                 <Link href="/contact">Apply Now</Link>
               </h4>
@@ -36,7 +36,7 @@ export default function index({ careers, contact }) {
               </svg>
             </div>
           </div>
-          <div className="w-[75.19%] space-y-[8rem]">
+          <div className="lg:w-[75.19%] space-y-[8rem]">
             <div className="space-y-[.8rem] ">
               <h4 className="text-[2rem] text-white">Company Description</h4>
               <p className="text-[1.6rem] text-white leading-[3.2rem]">
@@ -72,6 +72,14 @@ export default function index({ careers, contact }) {
                 voluptatem sed placeat omnis ut voluptatibus ratione quo quisquam tempora nam amet assumenda est vero
                 sint eos temporibus consequatur minus amet.
               </p>
+            </div>
+            <div className="flex lg:hidden items-center space-x-[1.6rem] mt-[5.6rem]">
+              <h4 className="text-[1.8rem] text-white">
+                <Link href="/contact">Apply Now</Link>
+              </h4>
+              <svg className="w-[2.4rem] h-[2.4rem]">
+                <use href="/images/sprite.svg#icon-arrow" />
+              </svg>
             </div>
           </div>
         </Container>

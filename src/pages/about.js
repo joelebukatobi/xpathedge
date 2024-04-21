@@ -46,7 +46,7 @@ export default function index({ heading, text, contact, services, teams }) {
               data-aos-duration="500"
               data-aos-delay="50"
               data-aos-easing="ease-in-out"
-              className="flex items-center justify-between lg:justify-start space-x-[1.6rem]"
+              className="flex items-center space-x-[1.6rem]"
             >
               <p className="uppercase text-[1.4rem] lg:text-[2.2rem] font-bold tracking-[.4rem] lg:tracking-[.8rem] ">
                 Why Choose Us?
@@ -163,7 +163,7 @@ export default function index({ heading, text, contact, services, teams }) {
               data-aos-duration="500"
               data-aos-delay="50"
               data-aos-easing="ease-in-out"
-              className="flex justify-between lg:justify-start items-center space-x-[1.6rem]"
+              className="flex items-center space-x-[1.6rem]"
             >
               <p className="uppercase text-[1.4rem] lg:text-[2.2rem] font-bold tracking-[.4rem] lg:tracking-[.8rem]">
                 Meet the team

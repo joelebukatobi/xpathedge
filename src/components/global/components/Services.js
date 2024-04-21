@@ -22,7 +22,7 @@ export default function Services({ services }) {
           data-aos-duration="500"
           data-aos-delay="50"
           data-aos-easing="ease-in-out"
-          className="flex items-center justify-between lg:justify-start space-x-[1.6rem]"
+          className="flex items-center space-x-[1.6rem]"
         >
           <p className="uppercase text-[1.4rem] md:text-[2.2rem] font-black tracking-[.4rem] lg:tracking-[.8rem]">
             Our Services

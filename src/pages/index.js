@@ -19,7 +19,7 @@ export default function index({ services, projects, contact }) {
   return (
     <Layout contact={contact}>
       <Header
-        heading={'Driving Growth and Innovation with Cutting-Edge Tech Solutions.'}
+        heading={'Imagination is the only limitation.'}
         text={`From data-driven insights to integrated campaigns, we are your trusted partner in leveraging the power of technology to unlock your business's full potential.`}
         className={'mt-[10vh] pt-[5.6rem] pb-[8rem]'}
       />
@@ -34,8 +34,10 @@ export default function index({ services, projects, contact }) {
             className="flex items-center space-x-[1.6rem] max-w-[114rem] w-[100%]"
             cursor-class="overlay"
           >
-            <p className="uppercase text-[1.6rem] md:text-[2.2rem] font-black tracking-[.8rem]">Projects</p>
-            <hr className="h-[.2rem] w-[32rem] bg-black border-none" />
+            <p className="uppercase text-[1.4rem] md:text-[2.2rem] font-black tracking-[.4rem] tracking-[.8rem]">
+              Projects
+            </p>
+            <hr className="h-[.2rem] w-[32.24%] lg:w-[32rem] bg-black border-none" />
           </div>
           <div
             data-aos="fade-up"
@@ -51,7 +53,7 @@ export default function index({ services, projects, contact }) {
           <div className="flex justify-center w-[100%]">
             <div className="flex items-center space-x-[1.6rem]">
               <p className="text-[1.8rem]" cursor-class="navmenu">
-                <Link href="/work">View More</Link>
+                <Link href="/works">View More</Link>
               </p>
               <svg className="w-[2.4rem] h-[2.4rem]">
                 <use href="/images/sprite.svg#icon-arrow" />

@@ -59,13 +59,7 @@ export default function Navbar({ contact }) {
                     <a href={`${contact.twitter}` ?? ''}>Twitter</a>
                   </li>
                   <li className="text-[2rem] md:w-[15%]">
-                    <a href={`${contact.behance}` ?? ''}>Behance</a>
-                  </li>
-                  <li className="text-[2rem] md:w-[15%]">
                     <a href={`${contact.instagram}` ?? ''}>Instagram</a>
-                  </li>
-                  <li className="text-[2rem] md:w-[15%]">
-                    <a href={`${contact.facebook}` ?? ''}>Facebook</a>
                   </li>
                 </ul>
               </div>

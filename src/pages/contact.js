@@ -54,7 +54,7 @@ export default function index({ contact }) {
         <section className="bg-[#191919] text-white pt-[16%] md:pt-[32%] lg:pt-[16%] pb-[5%]">
           <Container>
             <div cursor-class="overlay">
-              <h3 className="mt-[12vh] md:mt-[0] text-[2rem] uppercase fold-bold font-IBMPlexMono">
+              <h3 className="mt-[12vh] md:mt-[0] text-[1.6rem] md:text-[2rem] text-[#979797] capitalize fold-bold font-IBMPlexMono">
                 Let’s bring your ideas to life.
               </h3>
               <h1 className="text-[3.2rem] md:text-[6.4rem] lg:text-[8.8rem]  font-bold mb-[8rem] md:mb-[12rem] font-IBMPlexMono">
@@ -67,7 +67,7 @@ export default function index({ contact }) {
                 data-aos-duration="500"
                 data-aos-delay="50"
                 data-aos-easing="ease-in-out"
-                className="md:w-[33.94%] text-[1.8rem]"
+                className="md:w-[33.94%] text-[1.6rem] lg:text-[1.8rem]"
                 cursor-class="overlay"
               >
                 Our Team is geared towards solving even the most complex ideas. Talk to us about your needs

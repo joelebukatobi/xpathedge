@@ -34,7 +34,7 @@ export default function index({ services, projects, contact }) {
             className="flex items-center space-x-[1.6rem] max-w-[114rem] w-[100%]"
             cursor-class="overlay"
           >
-            <p className="uppercase text-[1.4rem] md:text-[2.2rem] font-black tracking-[.4rem] tracking-[.8rem]">
+            <p className="uppercase text-[1.4rem] md:text-[2.2rem] font-black tracking-[.4rem] md:tracking-[.8rem]">
               Projects
             </p>
             <hr className="h-[.2rem] w-[32.24%] lg:w-[32rem] bg-black border-none" />

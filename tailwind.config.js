@@ -10,9 +10,9 @@ module.exports = {
       xl: '1440px',
     },
     fontFamily: {
-      Mulish: ['var(--mulish-font)', ...fontFamily.sans],
-      IBMPlexMono: ['var(--ibm-plex-mono-font)', ...fontFamily.sans],
-      DMSans: ['var(--dm-sans-font)', ...fontFamily.sans],
+      Mulish: ['Mulish', 'sans-serif'],
+      IBMPlexMono: ['IBM Plex Mono', 'monospace'],
+      DMSans: ['DM Sans', 'sans-serif'],
     },
     // colors: {
     //   white: '#ffffff',

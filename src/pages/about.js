@@ -25,11 +25,13 @@ export default function index({ heading, text, contact, services, teams }) {
           data-aos-easing="ease-in-out"
           className="flex flex-col md:flex-row space-y-[1.6rem] md:space-y-[0] justify-between mt-[10%]"
         >
-          <h5 className="text-[1.8rem] uppercase  font-bold tracking-[.8rem]">our mission</h5>
+          <h5 className="text-[1.2rem] lg:text-[1.8rem] uppercase  font-bold tracking-[.4rem] lg:tracking-[.8rem]">
+            our mission
+          </h5>
           <p className="text-[1.6rem] md:text-[2.4rem] md:w-[56.49%]">
-            We believe every organisation is unique in its way and deserves an expert edge if it is to deliver any
+            We believe every organization is unique in its way and deserves an expert edge if it is to deliver any
             value. Our goal is to deliver excellence both in ideation and implementation, collaborate uniquely, and
-            create tailored-made solutions to help our clients realise their desired goals.
+            create tailored-made solutions to help our clients realize their desired goals.
           </p>
         </div>
       </Header>
@@ -44,10 +46,12 @@ export default function index({ heading, text, contact, services, teams }) {
               data-aos-duration="500"
               data-aos-delay="50"
               data-aos-easing="ease-in-out"
-              className="flex items-center space-x-[1.6rem]"
+              className="flex items-center justify-between lg:justify-start space-x-[1.6rem]"
             >
-              <p className="uppercase text-[2.2rem] font-bold tracking-[.8rem]">Why Choose Us?</p>
-              <hr className="h-[.2rem] w-[32rem] bg-white border-none" />
+              <p className="uppercase text-[1.4rem] lg:text-[2.2rem] font-bold tracking-[.4rem] lg:tracking-[.8rem] ">
+                Why Choose Us?
+              </p>
+              <hr className="h-[.2rem] w-[32.24%] lg:w-[32rem] bg-white border-none" />
             </div>
             <div
               data-aos="fade-right"
@@ -68,7 +72,7 @@ export default function index({ heading, text, contact, services, teams }) {
                 data-aos-easing="ease-in-out"
                 className="md:w-[40.52%] space-y-[2.4rem] "
               >
-                <li className="flex space-x-[3.2rem]">
+                {/* <li className="flex space-x-[3.2rem]">
                   <div className="h-[2.8rem] w-[2.8rem] rounded-[100%] bg-[#AA0000] flex items-center justify-center">
                     <svg className="h-[3.2rem] w-[3.2rem]">
                       <use href="/images/sprite.svg#icon-check" />
@@ -79,7 +83,7 @@ export default function index({ heading, text, contact, services, teams }) {
                     <br />
                     At xPathEdge, we ensure honest and fair deals with our clients.
                   </p>
-                </li>
+                </li> */}
                 <li className="flex space-x-[3.2rem]">
                   <div className="h-[2.8rem] w-[2.8rem] rounded-[100%] bg-[#AA0000] flex items-center justify-center">
                     <svg className="h-[3.2rem] w-[3.2rem]">
@@ -93,7 +97,7 @@ export default function index({ heading, text, contact, services, teams }) {
                     date technology.
                   </p>
                 </li>
-                <li className="flex space-x-[3.2rem]">
+                {/* <li className="flex space-x-[3.2rem]">
                   <div className="h-[2.8rem] w-[2.8rem] rounded-[100%] bg-[#AA0000] flex items-center justify-center">
                     <svg className="h-[3.2rem] w-[3.2rem]">
                       <use href="/images/sprite.svg#icon-check" />
@@ -104,21 +108,21 @@ export default function index({ heading, text, contact, services, teams }) {
                     <br />
                     We ensure that our services are valuable, effective, and efficient.
                   </p>
-                </li>
+                </li> */}
                 <li className="flex space-x-[3.2rem]">
                   <div className="h-[2.8rem] w-[2.8rem] rounded-[100%] bg-[#AA0000] flex items-center justify-center">
                     <svg className="h-[3.2rem] w-[3.2rem]">
                       <use href="/images/sprite.svg#icon-check" />
                     </svg>
                   </div>
-                  <p className="text-[1.8rem]">
+                  <p className="text-[1.8rem] font">
                     <strong>Timeliness:</strong>
                     <br />
                     We ensure we meet deadlines in discharging our assigned duties to assure prompt service delivery
                     without compromising on quality.
                   </p>
                 </li>
-                <li className="flex space-x-[3.2rem]">
+                {/* <li className="flex space-x-[3.2rem]">
                   <div className="h-[2.8rem] w-[2.8rem] rounded-[100%] bg-[#AA0000] flex items-center justify-center">
                     <svg className="h-[3.2rem] w-[3.2rem]">
                       <use href="/images/sprite.svg#icon-check" />
@@ -131,7 +135,7 @@ export default function index({ heading, text, contact, services, teams }) {
                     them. We also treat our clients with the courtesy and appreciation they deserve in every
                     interaction.
                   </p>
-                </li>
+                </li> */}
                 <li className="flex space-x-[3.2rem]">
                   <div className="h-[2.8rem] w-[2.8rem] rounded-[100%] bg-[#AA0000] flex items-center justify-center">
                     <svg className="h-[3.2rem] w-[3.2rem]">
@@ -159,10 +163,12 @@ export default function index({ heading, text, contact, services, teams }) {
               data-aos-duration="500"
               data-aos-delay="50"
               data-aos-easing="ease-in-out"
-              className="flex items-center space-x-[1.6rem] "
+              className="flex justify-between lg:justify-start items-center space-x-[1.6rem]"
             >
-              <p className="uppercase text-[2.2rem] font-bold tracking-[.8rem]">Meet The Team</p>
-              <hr className="h-[.2rem] w-[32rem] bg-white border-none" />
+              <p className="uppercase text-[1.4rem] lg:text-[2.2rem] font-bold tracking-[.4rem] lg:tracking-[.8rem]">
+                Meet the team
+              </p>
+              <hr className="h-[.2rem] w-[32.24%] lg:w-[32rem] bg-white border-none" />
             </div>
             <div
               data-aos="fade-right"
@@ -174,13 +180,10 @@ export default function index({ heading, text, contact, services, teams }) {
               <div className="md:w-[24.71%]">
                 <p className="text-[1.8rem]">
                   Our team comprises the most experienced professionals poised to always deliver tailor-made solutions
-                  to your business. Our team members are located in the United States of America, Nigeria and the United
-                  Kingdom. Their expertise collectively spans over 20 years in Software Engineering and Development, Web
-                  design and development, UI/UX design, Digital Marketing, Procurement, Supply Chain, and Business
-                  Development.
+                  to your business.
                 </p>
               </div>
-              <div className="w-[21.73%] border-l-[.2rem] border-[#333333] pl-[4rem]">
+              <div className="lg:w-[21.73%]  pb-[1.6rem] lg:pb-0 lg:border-l-[.2rem] border-[#333333] lg:pl-[4rem]">
                 <h4 className="text-[#aa0000] text-[2.4rem] font-medium leading-[3.2rem]">Team Members</h4>
                 <h2 className="text-[4.8rem] font-extrabold mb-[2.4rem]">Location</h2>
                 <ul className="space-y-[.8rem]">
@@ -189,7 +192,7 @@ export default function index({ heading, text, contact, services, teams }) {
                   <li className="text-[#979797] text-[1.8rem]">Nigeria</li>
                 </ul>
               </div>
-              <div className="w-[33.04%] border-l-[.2rem] border-[#333333] pl-[4rem]">
+              <div className="lg:w-[33.04%] border-t-[.2rem] lg:border-0 pt-[4.8rem] lg:pt-0 lg:border-l-[.2rem] border-[#333333] lg:pl-[4rem]">
                 <h4 className="text-[#aa0000] text-[2.4rem] font-medium leading-[3.2rem]">Collective Expertise of</h4>
                 <h2 className="text-[4.8rem] font-extrabold mb-[2.4rem]">20 Years</h2>
                 <ul className="space-y-[.8rem]">
@@ -205,7 +208,7 @@ export default function index({ heading, text, contact, services, teams }) {
         </Container>
 
         <Container>
-          <div className="flex gap-x-[1.41%] gap-y-[10.4rem] flex-wrap mt-[14rem] w-100 ">
+          <div className="flex flex-col lg:flex-row flex-wrap gap-x-[1.41%] gap-y-[10.4rem] mt-[14rem] w-100 ">
             {teams.map((member) => {
               return <Team member={member} key={member.id} />;
             })}

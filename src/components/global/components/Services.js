@@ -22,12 +22,12 @@ export default function Services({ services }) {
           data-aos-duration="500"
           data-aos-delay="50"
           data-aos-easing="ease-in-out"
-          className="flex items-center space-x-[1.6rem]"
+          className="flex items-center justify-between lg:justify-start space-x-[1.6rem]"
         >
-          <p className="uppercase text-[1.6rem] md:text-[2.2rem] font-black tracking-[.6rem] md:tracking-[.8rem]">
+          <p className="uppercase text-[1.4rem] md:text-[2.2rem] font-black tracking-[.4rem] lg:tracking-[.8rem]">
             Our Services
           </p>
-          <hr className="h-[.2rem] w-[40%] md:w-[32rem] bg-black border-none" />
+          <hr className="h-[.2rem] w-[32.24%] md:w-[32rem] bg-black border-none" />
         </div>
         <div
           data-aos="fade-up"

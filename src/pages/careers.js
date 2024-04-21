@@ -9,20 +9,16 @@ const qs = require('qs');
 export default function index({ careers, contact }) {
   return (
     <Layout contact={contact} title={'xPathEdge | Career'}>
-      <Header
-        heading={'Join our team of magicians'}
-        text={`Work is more than a desk and can definitely be more than a to-do list. We are creating great things, and we are always looking for great people to join us.`}
-        className={'mt-[10vh] pt-[5.6rem] lg:pb-0'}
-      ></Header>
+      <Header heading={'Join our team of magicians'} text={``} className={'mt-[10vh] pt-[5.6rem] lg:pb-0'}></Header>
 
-      <div className="w-100 h-[72rem] pt-[8rem] pb-[9.6rem] bg-[#191919] flex align-center justify-center gap-x-[4rem] overflow-hidden">
-        <div className="w-[20%] h-[100%]">
+      <div className="w-100 lg:h-[72rem] px-[3.2rem] pb-[4rem] lg:px-0 lg:pt-[8rem] lg:pb-[9.6rem] bg-[#191919] flex align-center justify-center gap-x-[4rem] overflow-hidden">
+        <div className="hidden lg:block w-[20%] h-[100%]">
           <img className="h-[100%] w-[100%]" src="/images/career-img-one.png" alt="" />
         </div>
-        <div className="w-[52.36%] h-[100%] overflow-hidden">
+        <div className="w-[100%] h-[100%] overflow-hidden">
           <img className="w-[100%]" src="/images/career-img-two.png" alt="" />
         </div>
-        <div className="w-[20%] h-[100%]">
+        <div className="hidden lg:block w-[20%] h-[100%]">
           <img className="h-[100%] w-[100%]" src="/images/career-img-three.png" alt="" />
         </div>
       </div>

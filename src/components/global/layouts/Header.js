@@ -17,7 +17,7 @@ export default function Header({ heading, text, children, className }) {
             data-aos-duration="500"
             data-aos-delay="50"
             data-aos-easing="ease-in-out"
-            className="text-[3.2rem] md:text-[8rem] lg:text-[6.4rem] xl:text-[8.8rem] tracking-[-0.24rem] lg:tracking-0 font-IBMPlexMono font-bold "
+            className="text-[3.2rem] md:text-[6.4rem] lg:text-[6.4rem] xl:text-[8.8rem] tracking-[-0.24rem] lg:tracking-0 font-IBMPlexMono font-bold "
           >
             {heading}
           </h1>

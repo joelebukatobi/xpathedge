@@ -19,8 +19,8 @@ export default function index({ services, projects, contact }) {
   return (
     <Layout contact={contact}>
       <Header
-        heading={'Imagination is the only limitation.'}
-        text={`From data-driven insights to integrated campaigns, we are your trusted partner in leveraging the power of technology to unlock your business's full potential.`}
+        heading={'Driving Growth and Innovation with Cutting-Edge Tech Solutions.'}
+        text={`From data-driven insights to integrated campaigns, we are your trusted partner in leveraging the power of technology to unlock your business's full potential..`}
         className={'mt-[10vh] pt-[5.6rem] pb-[8rem]'}
       />
 

@@ -1,6 +1,14 @@
+//
+import Image from 'next/image';
+
+// Components
 import Header from '@/global//layouts/Header';
 import Layout from '@/global//layouts/Layout';
 import Careers from '@/global//components/Careers';
+
+// Images
+import CareerImageWeb from '@/images//career-img-web.png';
+import CareerImageMobile from '@/images//career-img-mobile.png';
 
 import { API_URL } from '@/config/index';
 import Container from '@/global//layouts/Container';
@@ -12,11 +20,11 @@ export default function index({ careers, contact }) {
       <Header heading={'Join our team of magicians'} text={``} className={'mt-[10vh] pt-[5.6rem] lg:pb-0'}></Header>
 
       <div className="w-100 px-[3.2rem] pb-[4rem] lg:px-0 lg:pt-[8rem] lg:pb-[9.6rem] bg-[#191919]">
-        <img className="w-[100%] hidden lg:block" src="/images/career-img.png" alt="" />
+        <Image width={''} height={''} src={CareerImageWeb} className="w-[100%] hidden lg:block" alt="" />
         {/* <div className="hidden lg:block w-[20%] h-[100%]">
           <img className="h-[100%] w-[100%]" src="/images/career-img-one.png" alt="" />
         </div> */}
-        <img className="lg:hidden w-[100%]" src="/images/career-img-two.png" alt="" />
+        <Image width={''} height={''} src={CareerImageMobile} className="lg:hidden w-[100%]" alt="" />
 
         {/* <div className="hidden lg:block w-[20%] h-[100%]">
           <img className="h-[100%] w-[100%]" src="/images/career-img-three.png" alt="" />
@@ -29,7 +37,7 @@ export default function index({ careers, contact }) {
               <p className="text-[#979797] text-[2.4rem]">
                 We're thrilled you're interested in joining our team at xPathEdge!
               </p>
-              <h2 className="text-[4.8rem] font-IBMPlexMono text-white tracking-[-.24rem]">
+              <h2 className="text-[3.6rem] lg:text-[4.8rem] font-IBMPlexMono text-white tracking-[-.24rem] font-extrabold">
                 Unfortunately, we don't have any open positions at the moment.
               </h2>
             </div>

@@ -29,7 +29,10 @@ export default function Footer({ contact }) {
               data-aos-easing="ease-in-out"
               className="lg:w-[60%] mb-[10.4rem]"
             >
-              <h3 className="text-[3.2rem] md:text-[5.8rem] font-bold font-IBMPlexMono" cursor-class="overlay">
+              <h3
+                className="text-[3.2rem] md:text-[5.8rem] font-bold font-IBMPlexMono mb-[1.6rem] lg:mb-0"
+                cursor-class="overlay"
+              >
                 Have an idea you’d want to execute?
               </h3>
               <div className="flex items-center space-x-[1.6rem]">

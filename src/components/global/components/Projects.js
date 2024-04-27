@@ -45,9 +45,10 @@ export default function Projects({ project }) {
           </div>
         )}
       </div>
-      <div className="space-y-[1.6rem]" cursor-class="overlay">
-        <h4 className="text-[2.4rem] font-bold capitalize ">{project.name}</h4>
-        <p className="text-[1.6rem]">{project.description}</p>
+      <div className="" cursor-class="overlay">
+        <p className="text-[2.8rem]">
+          <strong className="capitalize">{project.name}</strong> - {project.description}
+        </p>
       </div>
     </div>
   );

@@ -63,7 +63,7 @@ export default function index({ token }) {
               <h5 className="text-black/70 hover:text-black">Dashboard &nbsp;</h5>
             </Link>
             <h5>&gt; &nbsp;</h5>
-            <Link href="/admin/service">
+            <Link href="/admin/services">
               <h5 className="text-black/70 hover:text-black">Services &nbsp;</h5>
             </Link>
           </div>

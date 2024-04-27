@@ -38,7 +38,7 @@ export default function Services({ services }) {
         >
           {services.map((service) => (
             <div className="space-y-[.8rem] lg:space-y-[4.8rem] md:w-[75%] lg:w-[48%]" key={service.id}>
-              <h2 className="text-[2.2rem] md:text-[4rem] lg:text-[6.8rem] font-IBMPlexMono font-bold ">
+              <h2 className="text-[2.2rem] md:text-[4rem] lg:text-[6.8rem] font-IBMPlexMono font-extrabold lg:w-[95%]">
                 {service.name}
               </h2>
               <p className=" text-[1.6rem] md:w-[81.6%]">{service.description}</p>

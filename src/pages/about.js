@@ -29,9 +29,9 @@ export default function index({ heading, text, contact, services, teams }) {
             our mission
           </h5>
           <p className="text-[1.6rem] md:text-[2.4rem] md:w-[56.49%]">
-            We believe every organization is unique in its way and deserves an expert edge if it is to deliver any
+            We believe every organisation is unique in its way and deserves an expert edge if it is to deliver any
             value. Our goal is to deliver excellence both in ideation and implementation, collaborate uniquely, and
-            create tailored-made solutions to help our clients realize their desired goals.
+            create tailored-made solutions to help our clients realise their desired goals.
           </p>
         </div>
       </Header>

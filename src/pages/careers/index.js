@@ -34,10 +34,10 @@ export default function index({ careers, contact }) {
         <div className="bg-[#191919] pt-[16rem] pb-[4rem]">
           <Container>
             <div className="w-[80.96%]">
-              <p className="text-[#979797] text-[2.4rem]">
+              <p className="text-[#979797] text-[2rem] text-[2.4rem]">
                 We're thrilled you're interested in joining our team at xPathEdge!
               </p>
-              <h2 className="text-[3.6rem] lg:text-[4.8rem] font-IBMPlexMono text-white tracking-[-.24rem] font-extrabold">
+              <h2 className="text-[3.2rem] lg:text-[4.8rem] font-IBMPlexMono text-white tracking-[-.24rem] font-extrabold">
                 Unfortunately, we don't have any open positions at the moment.
               </h2>
             </div>

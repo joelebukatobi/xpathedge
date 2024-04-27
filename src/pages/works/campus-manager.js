@@ -34,13 +34,14 @@ export default function index({ careers, contact }) {
 
           <div className="w-[68.71%]">
             <p className="text-[2rem]">
-              Ut pariatur enim et dolore voluptatem sed placeat omnis ut voluptatibus ratione quo quisquam tempora nam
-              amet assumenda est vero sint eos temporibus consequatur minus amet. Ut pariatur enim et dolore voluptatem
-              sed placeat omnis ut voluptatibus ratione quo quisquam tempora nam amet assumenda est vero sint eos
-              temporibus consequatur minus amet. Ut pariatur enim et dolore voluptatem sed placeat omnis ut voluptatibus
-              ratione quo quisquam tempora nam amet assumenda est vero sint eos temporibus consequatur minus amet. Ut
-              pariatur enim et dolore voluptatem sed placeat omnis ut voluptatibus ratione quo quisquam tempora nam amet
-              assumenda est vero sint eos temporibus consequatur minus amet.
+              The development of The Campus Manager (TCM) was driven by the need to address the challenges inherent in
+              traditional campus management systems. These challenges stemmed from manual administrative processes,
+              inefficient data management, and unreliable attendance tracking methods prevalent in educational
+              institutions. One of the primary challenges that prompted the creation of TCM was the reliance on manual
+              administrative procedures. In traditional systems, administrative tasks such as student registration, fee
+              payment processing, and course scheduling were predominantly carried out manually. This not only consumed
+              a significant amount of time and resources but also left room for human error, leading to inaccuracies in
+              data and inefficiencies in workflow.
             </p>
             <div className="flex items-center space-x-[1.6rem] mt-[5.6rem]">
               <p className="text-[1.8rem] text-black">
@@ -81,7 +82,7 @@ export default function index({ careers, contact }) {
               student records can be securely stored, and accessing data is as simple as a click.  
             </p>
             <p className="text-[2rem]">
-              <strong> ccurate and Fraud-Resistant Attendance Tracking:</strong>
+              <strong> Accurate and Fraud-Resistant Attendance Tracking:</strong>
               The Face Recognition attendance feature within TCM ensures the unique registration of each individual
               based on their biostatistics, thereby eliminating any potential compromise in attendance records.
             </p>

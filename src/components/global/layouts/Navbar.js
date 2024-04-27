@@ -41,9 +41,11 @@ export default function Navbar({ contact }) {
             <div className="flex flex-col-reverse md:flex-row md:items-center h-[100%] w-[100%] justify-between ">
               <div className="md:w-[38.59%] space-y-[3.2rem] md:space-y-[4rem] xl:space-y-[16rem] mt-[4rem] md:mt-[0]">
                 <div className="hidden md:block space-y-[5.6rem]">
-                  <svg className="h-[13.4rem] w-[11.3rem] cursor-pointer">
-                    <use href="/images/sprite.svg#logo-large-transition" />
-                  </svg>
+                  <div className="pl-[1.6rem]">
+                    <svg className="animate-rotate h-[13.4rem] w-[11.3rem] cursor-pointer">
+                      <use href="/images/sprite.svg#logo-large-transition" />
+                    </svg>
+                  </div>
                   <div className="w-[71.59%] space-y-[1.6rem]" cursor-class="overlay">
                     <h4 className="text-[2.4rem] font-bold font-Mulish">{contact.email}</h4>
                     <h5 className="text-[2rem]">{contact.address}</h5>

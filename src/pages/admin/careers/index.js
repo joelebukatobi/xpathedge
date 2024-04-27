@@ -60,7 +60,7 @@ export default function index({ positions, token }) {
                             <use href={`/images/sprite.svg#icon-post`} />
                           </svg>
                         </Link>
-                        <div onClick={(e) => (e.preventDefault(), setSlug(positions.slug), setOpen(toggle))}>
+                        <div onClick={(e) => (e.preventDefault(), setSlug(position.slug), setOpen(toggle))}>
                           <svg className="hover:stroke-red-600">
                             <use href={`/images/sprite.svg#icon-trash`} />
                           </svg>

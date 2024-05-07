@@ -1,6 +1,22 @@
 const cursor = document.querySelector('#cursor');
 const cursorCircle = cursor.querySelector('.cursor__circle');
 
+const careerImg = document.getElementById('careerImg');
+console.log(careerImg);
+
+careerImg.addEventListener('mouseenter', function () {
+  cursor.style.mixBlendMode = 'normal';
+  cursorCircle.style.backgroundColor = 'transparent'; // Change background color to transparent
+  cursorCircle.style.border = 'none'; // Remove border
+  console.log('hovered');
+});
+
+careerImg.addEventListener('mouseleave', function () {
+  cursor.style.mixBlendMode = 'difference';
+  cursorCircle.style.backgroundColor = '#ffffff'; // Revert background color to default
+  cursorCircle.style.border = '1px solid #ffffff';
+});
+
 const mouse = { x: -100, y: -100 }; // mouse pointer's coordinates
 const pos = { x: 0, y: 0 }; // cursor's coordinates
 const speed = 0.1; // between 0 and 1

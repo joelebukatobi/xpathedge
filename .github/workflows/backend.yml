@@ -15,6 +15,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: 217.21.77.127
+          port: 65002
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
           server-dir: /home/u729559456/domains/xpathedge.com/public_html/backend/

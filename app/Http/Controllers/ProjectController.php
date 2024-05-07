@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Storage;
-use Illuminate\Http\Request;
 use App\Models\Project;
+use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
@@ -137,8 +137,7 @@ class ProjectController extends Controller
         } else {
             $filename = $project->image;
             $edit['image'] = $filename;
-        }
-        ;
+        };
 
 
         $project->update($edit);

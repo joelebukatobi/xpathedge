@@ -3,17 +3,16 @@ import AOS from 'aos';
 
 import 'aos/dist/aos.css';
 
-export default function Dropdown({ className, options, name }) {
+export default function Dropdown({ className, options, name, option, select }) {
   useEffect(() => {
     AOS.init();
   }, []);
   const [open, setOpen] = useState(false);
-  const [option, setOption] = useState(null);
 
   const toggle = () => setOpen(!open);
 
   const onOptionClicked = (value) => () => {
-    setOption(value);
+    select(value);
     setOpen(false);
   };
   return (
@@ -29,7 +28,7 @@ export default function Dropdown({ className, options, name }) {
         onClick={toggle}
         className="flex items-center space-x-[1.6rem] uppercase text-[2.2rem] font-bold tracking-[.8rem] mb-[1.6rem]"
       >
-        {name}
+        {option || name} {/* Highlight selected option */}
         <svg className={open ? 'rotate-180 w-[4rem] h-[4rem]' : 'w-[4rem] h-[4rem]'}>
           <use href="/images/sprite.svg#icon-chevron-down" />
         </svg>

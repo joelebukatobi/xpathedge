@@ -18,8 +18,13 @@ export default function index({ token }) {
   const navigate = useRouter();
   // Store values gotten from form
   const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
+  const [responsibilities, setResponsibilities] = useState('');
   const [category, setCategory] = useState('');
+  const [company_description, setCompanyDescription] = useState('');
+  const [role, setRole] = useState('');
+  const [about, setAbout] = useState('');
+  const [type, setType] = useState('');
+  const [link, setLink] = useState('');
   // Handles submit for the form
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,8 +37,13 @@ export default function index({ token }) {
       },
       body: JSON.stringify({
         name: name,
-        description: description,
+        responsibilities: responsibilities,
         category: category,
+        company_description: company_description,
+        role: role,
+        about: about,
+        link: link,
+        type: type,
       }),
     });
 
@@ -50,7 +60,7 @@ export default function index({ token }) {
   };
   return (
     <Layout>
-      <div className="w-1/2">
+      <div className="w-full">
         <ToastContainer autoClose={4000} position="bottom-right" theme="colored" />
         <header className="flex flex-col ">
           <div className="flex items-center mb-[1.6rem]">
@@ -71,42 +81,95 @@ export default function index({ token }) {
           </div>
         </header>
         <form action="" className="mt-[4rem]">
-          <Input
-            label={'Name'}
-            placeholder={'Name'}
-            type={'text'}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            className={'mb-[2.4rem]'}
-          />
-          <div className="w-full">
-            <label className="text-black/70" htmlFor="role">
-              Category
-            </label>
-            <section className="!w-full border-[.16rem] !h-[4.8rem] border-[#ECECEC] rounded-[.4rem] mt-[.8rem] pr-[.8rem] mb-[2.4rem] flex items-center">
-              <select
-                name="role"
-                className="w-full bg-white outline-none rounded-[.4rem] pl-[.8rem] mb-0"
-                required
-                onChange={(e) => setCategory(e.target.value)}
-              >
-                <option value="">Select an option</option>
-                <option value={'design'}>Design</option>
-                <option value={'engineering'}>Engineering</option>
-                <option value={'operation'}>Operations</option>
-              </select>
-            </section>
+          <div className="flex items-start gap-x-[3.2rem] mb-[2.4rem];">
+            <Input
+              label={'Position'}
+              placeholder={'Enter the position'}
+              type={'text'}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              className={'mb-[2.4rem]'}
+            />
+
+            <Input
+              label={'Position Type'}
+              placeholder={'Remote, Onsite or Hybrid'}
+              type={'text'}
+              value={type}
+              onChange={(e) => setType(e.target.value)}
+              required
+              className={'mb-[2.4rem]'}
+            />
+          </div>
+          <div className="flex items-start gap-x-[3.2rem] mb-[2.4rem];">
+            <Input
+              label={'Application Link'}
+              placeholder={'Enter a link starting with http:// or https://'}
+              type={'text'}
+              value={link}
+              onChange={(e) => setLink(e.target.value)}
+              required
+              className={'mb-[2.4rem]'}
+            />
+            <div className="w-full">
+              <label className="text-black/70" htmlFor="role">
+                Category
+              </label>
+              <section className="!w-full border-[.16rem] !h-[4.8rem] border-[#ECECEC] rounded-[.4rem] mt-[.8rem] pr-[.8rem] mb-[2.4rem] flex items-center">
+                <select
+                  name="role"
+                  className="w-full bg-white outline-none rounded-[.4rem] pl-[.8rem] mb-0"
+                  required
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  <option value="">Select an option</option>
+                  <option value={'design'}>Design</option>
+                  <option value={'engineering'}>Engineering</option>
+                  <option value={'operation'}>Operations</option>
+                </select>
+              </section>
+            </div>
           </div>
           <Textarea
-            label={'Description'}
-            placeholder={'Description'}
+            label={'Company Description'}
+            placeholder={'Company Description'}
             type={'text'}
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            value={company_description}
+            onChange={(e) => setCompanyDescription(e.target.value)}
             required
             className={'mb-[2.4rem]'}
-            classTextArea={'mt-[.8rem]'}
+            classTextArea={'!h-[16rem] mt-[.8rem]'}
+          />
+          <Textarea
+            label={'Role'}
+            placeholder={'Role'}
+            type={'text'}
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+            required
+            className={'mb-[2.4rem]'}
+            classTextArea={'!h-[16rem] mt-[.8rem]'}
+          />
+          <Textarea
+            label={'Responsibilities'}
+            placeholder={'Responsibilities'}
+            type={'text'}
+            value={responsibilities}
+            onChange={(e) => setResponsibilities(e.target.value)}
+            required
+            className={'mb-[2.4rem]'}
+            classTextArea={'!h-[16rem] mt-[.8rem]'}
+          />
+          <Textarea
+            label={'About'}
+            placeholder={'About'}
+            type={'text'}
+            value={about}
+            onChange={(e) => setAbout(e.target.value)}
+            required
+            className={'mb-[2.4rem]'}
+            classTextArea={'!h-[16rem] mt-[.8rem]'}
           />
         </form>
       </div>

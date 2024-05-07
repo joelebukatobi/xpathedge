@@ -51,7 +51,7 @@ export default function index({ positions, token }) {
                   <tr key={position.id}>
                     <td>{id++}</td>
                     <td className="capitalize">{position.name}</td>
-                    <td className="first-letter:capitalize">{position.description.substring(0, 35)}...</td>
+                    <td className="first-letter:capitalize">{position.role.substring(0, 35)}...</td>
                     <td className="first-letter:capitalize">{position.category}</td>
                     <td>
                       <div className="flex items-center gap-x-[.8rem] pl-[1.6rem]">

@@ -13,6 +13,7 @@ export default function Input({
   classLabel,
   classInput,
   classButton,
+  pattern,
 }) {
   return (
     <>
@@ -33,6 +34,7 @@ export default function Input({
             onChange={onChange}
             required={required}
             className={classInput}
+            pattern={pattern}
           />
           <button className={`invisible ${classButton}`}>
             <svg>

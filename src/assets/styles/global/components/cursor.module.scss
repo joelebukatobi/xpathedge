@@ -7,6 +7,15 @@
     pointer-events: none;
     will-change: transform;
     mix-blend-mode: difference;
+
+    &:hover img {
+      mix-blend-mode: normal;
+      border: 2px solid red;
+    }
+  }
+
+  #cursor + img {
+    mix-blend-mode: normal;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -41,7 +50,7 @@
     #cursor.overlay .cursor__circle {
       width: 16rem;
       height: 16rem;
-      background-color: rgba(#ffffff, 1);
+      background-color: #ffffff;
       border-color: #ffffff;
     }
 

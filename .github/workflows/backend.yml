@@ -17,4 +17,4 @@ jobs:
           server: 217.21.77.127
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          server-dir: /home/u729559456/domains/xpathedge.com/public_html/backend
+          server-dir: /home/u729559456/domains/xpathedge.com/public_html/backend/

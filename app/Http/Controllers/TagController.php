@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class TagController extends Controller
 {
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -21,8 +21,8 @@ class TagController extends Controller
             'success' => true,
             'tags' => $tag,
         ];
-        
-        return response ($response, 200);
+
+        return response($response, 200);
     }
 
     /**
@@ -34,15 +34,16 @@ class TagController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
+        $request->validate(
+            [
                 'name' => 'required|string|unique:tags',
-            ], 
-            [  
+            ],
+            [
                 'name.required' => 'Please enter a tag name',
                 'name.unique' => 'Sorry, this name has already been used',
             ]
-        ); 
-        
+        );
+
         $tag = Tag::create([
             'name' => $request->name,
         ]);
@@ -50,8 +51,8 @@ class TagController extends Controller
         $response = [
             'success' => true,
             'message' => 'Tag added successfully',
-            'tag' => $tag, 
-            
+            'tag' => $tag,
+
         ];
 
         return response($response, 200);
@@ -69,7 +70,7 @@ class TagController extends Controller
         $tag = Tag::where(['slug' => $slug])->firstOrFail();
         $response = [
             'success' => true,
-            'tag' => $tag, 
+            'tag' => $tag,
         ];
 
         return response($response, 200);
@@ -86,22 +87,22 @@ class TagController extends Controller
     {
         //
         $tag = Tag::where(['slug' => $slug])->firstOrFail();
-        $tag->update($request->validate([
+        $tag->update($request->validate(
+            [
                 'name' => 'required|string|unique:tags',
-            ], 
-            [  
+            ],
+            [
                 'name.required' => 'Please enter a tag name',
                 'name.unique' => 'Sorry, this name has already been used',
             ]
-        )); 
+        ));
         $response = [
             'success' => true,
             'message' => 'Tag updated successfully',
-            'tag' => $tag, 
+            'tag' => $tag,
         ];
 
         return response($response, 200);
-
     }
 
     /**
@@ -123,7 +124,7 @@ class TagController extends Controller
     }
 
 
-        /**
+    /**
      * Search for a name
      *
      * @param  string  $name

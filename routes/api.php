@@ -53,6 +53,7 @@ Route::get('/contact/{id}', [ContactController::class, 'show']);
 Route::get('/services', [ServiceController::class, 'index']);
 // Careers
 Route::get('/careers', [CareerController::class, 'index']);
+Route::get('/careers/{slug}', [CareerController::class, 'show']);
 // Projects
 Route::get('/projects', [ProjectController::class, 'index']);
 // Teams
@@ -93,7 +94,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/services/{slug}', [ServiceController::class, 'update']);
     Route::delete('/services/{slug}', [ServiceController::class, 'destroy']);
     // Careers
-    Route::get('/careers/{slug}', [CareerController::class, 'show']);
     Route::post('/careers', [CareerController::class, 'store']);
     Route::post('/careers/{slug}', [CareerController::class, 'update']);
     Route::delete('/careers/{slug}', [CareerController::class, 'destroy']);

@@ -14,23 +14,30 @@ class Career extends Model
     protected $table = 'careers';
     protected $fillable = [
         'name',
-        'description',
+        'responsibilities',
         'category',
+        'company_description',
+        'role',
+        'link',
+        'type',
+        'about',
     ];
 
-    public function getSlugOptions():SlugOptions { 
+    public function getSlugOptions(): SlugOptions
+    {
         return (new SlugOptions())
             ->generateSlugsFrom('name')
             ->saveSlugsTo('slug')
             ->usingSeparator('-');
     }
 
-        /**
+    /**
      * Get the route key for the model.
      *
      * @return string
      */
-    public function getRouteKeyName() {
+    public function getRouteKeyName()
+    {
         return 'slug';
     }
 }

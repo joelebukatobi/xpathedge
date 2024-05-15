@@ -13,14 +13,16 @@ class Career extends Model
     use HasSlug;
     protected $table = 'careers';
     protected $fillable = [
-        'name',
+        'position',
+        'company_overview',
+        'job_description',
         'responsibilities',
+        'qualifications',
+        'salary',
+        'benefits',
         'category',
-        'company_description',
-        'role',
         'link',
         'type',
-        'about',
     ];
 
     public function getSlugOptions(): SlugOptions

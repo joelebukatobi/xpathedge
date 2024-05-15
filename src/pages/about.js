@@ -9,7 +9,6 @@ import 'aos/dist/aos.css';
 
 import { API_URL } from '@/config/index';
 import Team from '@/global//components/Team';
-const qs = require('qs');
 
 export default function index({ heading, text, contact, services, teams }) {
   useEffect(() => {

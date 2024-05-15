@@ -10,7 +10,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { API_URL } from '@/config/index';
-const qs = require('qs');
 
 export default function index({ services, projects, contact }) {
   useEffect(() => {

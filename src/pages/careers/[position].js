@@ -8,7 +8,6 @@ import Container from '@/global//layouts/Container';
 
 // Environment Variables
 import { API_URL } from '@/config/index';
-const qs = require('qs');
 
 export default function index({ position, contact }) {
   console.log(position);

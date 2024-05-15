@@ -12,7 +12,6 @@ import CareerImageMobile from '@/images//career-img-mobile.png';
 
 import { API_URL } from '@/config/index';
 import Container from '@/global//layouts/Container';
-const qs = require('qs');
 
 export default function index({ careers, contact }) {
   return (

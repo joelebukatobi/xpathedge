@@ -28,7 +28,7 @@ class Career extends Model
     public function getSlugOptions(): SlugOptions
     {
         return (new SlugOptions())
-            ->generateSlugsFrom('name')
+            ->generateSlugsFrom('position')
             ->saveSlugsTo('slug')
             ->usingSeparator('-');
     }

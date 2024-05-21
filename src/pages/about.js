@@ -153,7 +153,7 @@ export default function index({ heading, text, contact, services, teams }) {
           </div>
         </Container>
       </section>
-
+      {/* 
       <section className="bg-[#191919] text-white py-[18rem]">
         <Container>
           <div className="space-y-[8.8rem]">
@@ -213,7 +213,7 @@ export default function index({ heading, text, contact, services, teams }) {
             })}
           </div>
         </Container>
-      </section>
+      </section> */}
     </Layout>
   );
 }
@@ -229,7 +229,7 @@ export async function getServerSideProps() {
     props: {
       services: data[0].services,
       contact: data[1].contact,
-      teams: data[2].members,
+      // teams: data[2].members,
     },
   };
 }

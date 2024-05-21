@@ -150,8 +150,8 @@ export default function index({ role, token }) {
               classTextArea={'!h-[16rem] mt-[.8rem]'}
             />
             <Textarea
-              label={'Company Description'}
-              placeholder={'Company Overview'}
+              label={'Job Description'}
+              placeholder={'Job Overview'}
               type={'text'}
               value={jobDescription}
               onChange={(e) => setJobDescription(e.target.value)}

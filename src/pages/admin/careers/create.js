@@ -2,11 +2,13 @@
 import { useState } from 'react';
 // Next JS
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 // Components
 import Layout from '@/admin//layouts/Layout';
 import Input from '@/admin//element/Input';
 import Textarea from '@/admin//element/Textarea';
+const Editor = dynamic(() => import('@/admin//components/Editor'), { ssr: false });
 // Config & Helpers
 import { API_URL } from '@/config/index';
 import { parseCookies } from '@/helpers//index';
@@ -16,13 +18,15 @@ import { ToastContainer, toast } from 'react-toastify';
 export default function index({ token }) {
   // Assigns Next JS useRouter to a variable
   const navigate = useRouter();
-  // Store values gotten from form
-  const [name, setName] = useState('');
+  // Store values gotten from formconst
+  const [position, setPosition] = useState('');
+  const [companyOverview, setCompanyOverview] = useState('');
+  const [jobDescription, setJobDescription] = useState('');
   const [responsibilities, setResponsibilities] = useState('');
+  const [qualifications, setQualifications] = useState('');
+  const [salary, setSalary] = useState('');
+  const [benefits, setBenefits] = useState('');
   const [category, setCategory] = useState('');
-  const [company_description, setCompanyDescription] = useState('');
-  const [role, setRole] = useState('');
-  const [about, setAbout] = useState('');
   const [type, setType] = useState('');
   const [link, setLink] = useState('');
   // Handles submit for the form
@@ -36,14 +40,16 @@ export default function index({ token }) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: name,
+        position: position,
+        company_overview: companyOverview,
+        job_description: jobDescription,
         responsibilities: responsibilities,
+        qualifications: qualifications,
+        salary: salary,
+        benefits: benefits,
         category: category,
-        company_description: company_description,
-        role: role,
-        about: about,
-        link: link,
         type: type,
+        link: link,
       }),
     });
 
@@ -86,8 +92,8 @@ export default function index({ token }) {
               label={'Position'}
               placeholder={'Enter the position'}
               type={'text'}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={position}
+              onChange={(e) => setPosition(e.target.value)}
               required
               className={'mb-[2.4rem]'}
             />
@@ -131,46 +137,59 @@ export default function index({ token }) {
               </section>
             </div>
           </div>
-          <Textarea
-            label={'Company Description'}
-            placeholder={'Company Description'}
-            type={'text'}
-            value={company_description}
-            onChange={(e) => setCompanyDescription(e.target.value)}
-            required
-            className={'mb-[2.4rem]'}
-            classTextArea={'!h-[16rem] mt-[.8rem]'}
-          />
-          <Textarea
-            label={'Role'}
-            placeholder={'Role'}
-            type={'text'}
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-            required
-            className={'mb-[2.4rem]'}
-            classTextArea={'!h-[16rem] mt-[.8rem]'}
-          />
-          <Textarea
-            label={'Responsibilities'}
-            placeholder={'Responsibilities'}
-            type={'text'}
-            value={responsibilities}
-            onChange={(e) => setResponsibilities(e.target.value)}
-            required
-            className={'mb-[2.4rem]'}
-            classTextArea={'!h-[16rem] mt-[.8rem]'}
-          />
-          <Textarea
-            label={'About'}
-            placeholder={'About'}
-            type={'text'}
-            value={about}
-            onChange={(e) => setAbout(e.target.value)}
-            required
-            className={'mb-[2.4rem]'}
-            classTextArea={'!h-[16rem] mt-[.8rem]'}
-          />
+
+          <div className="flex items-start gap-x-[3.2rem] mb-[2.4rem];">
+            <Textarea
+              label={'Company Description'}
+              placeholder={'Company Description'}
+              type={'text'}
+              value={companyOverview}
+              onChange={(e) => setCompanyOverview(e.target.value)}
+              required
+              className={'mb-[2.4rem]'}
+              classTextArea={'!h-[16rem] mt-[.8rem]'}
+            />
+            <Textarea
+              label={'Company Description'}
+              placeholder={'Company Overview'}
+              type={'text'}
+              value={jobDescription}
+              onChange={(e) => setJobDescription(e.target.value)}
+              required
+              className={'mb-[2.4rem]'}
+              classTextArea={'!h-[16rem] mt-[.8rem]'}
+            />
+          </div>
+          <div className="mt-[2.4rem]">
+            <label className="text-black/70">Responsiblities</label>
+            <div className="mt-[.8rem]">
+              <Editor onChange={setResponsibilities} value={responsibilities} />
+            </div>
+          </div>
+          <div className="mt-[2.4rem]">
+            <label className="text-black/70">Qualifications</label>
+            <div className="mt-[.8rem]">
+              <Editor onChange={setQualifications} value={qualifications} />
+            </div>
+          </div>
+
+          <div className="mt-[2.4rem]">
+            <Input
+              label={'Salary'}
+              placeholder={'Enter the salary range'}
+              type={'text'}
+              value={salary}
+              onChange={(e) => setSalary(e.target.value)}
+              required
+              className={'mb-[2.4rem]'}
+            />
+          </div>
+          <div className="mt-[2.4rem]">
+            <label className="text-black/70">Benefits</label>
+            <div className="mt-[.8rem]">
+              <Editor onChange={setBenefits} value={benefits} />
+            </div>
+          </div>
         </form>
       </div>
     </Layout>

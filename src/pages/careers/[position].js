@@ -9,11 +9,15 @@ import Container from '@/global//layouts/Container';
 // Environment Variables
 import { API_URL } from '@/config/index';
 
-export default function index({ position, contact }) {
-  console.log(position);
+export default function index({ role, contact }) {
+  console.log(role);
   return (
     <Layout contact={contact} title={'xPathEdge | Career'}>
-      <Header heading={position.name} text={position.type} className={'mt-[10vh] pt-[5.6rem] lg:pb-0'}></Header>
+      <Header
+        heading={role.position}
+        text={`Nigeria, ${role.type}`}
+        className={'mt-[10vh] pt-[5.6rem] lg:pb-0'}
+      ></Header>
       <section className="bg-[#191919] pt-[8rem]">
         <Container className={'flex justify-between'}>
           <div className="w-[19.10%]">
@@ -25,7 +29,7 @@ export default function index({ position, contact }) {
             </ul>
             <div className="hidden lg:flex items-center space-x-[1.6rem] mt-[5.6rem]">
               <h4 className="text-[1.8rem] text-white">
-                <a href={position.link}>Apply Now</a>
+                <a href={role.link}>Apply Now</a>
               </h4>
               <svg className="w-[2.4rem] h-[2.4rem]">
                 <use href="/images/sprite.svg#icon-arrow" />
@@ -35,25 +39,40 @@ export default function index({ position, contact }) {
           <div className="lg:w-[75.19%] space-y-[8rem]">
             <div className="space-y-[.8rem] ">
               <h4 className="text-[2rem] text-white">Company Description</h4>
-              <p className="text-[1.6rem] text-white leading-[3.2rem]">{position.company_description}</p>
+              <p className="text-[1.6rem] text-white leading-[2.8rem]">{role.company_overview}</p>
             </div>
             <div className="space-y-[.8rem]">
-              <h4 className="text-[2rem] text-white">Role </h4>
-              <p className="text-[1.6rem] text-white leading-[3.2rem]">{position.role}</p>
+              <h4 className="text-[2rem] text-white">Job Description </h4>
+              <p className="text-[1.6rem] text-white leading-[2.8rem]">{role.job_description}</p>
             </div>
             <div className="space-y-[.8rem]">
               <h4 className="text-[2rem] text-white">Responsibilites</h4>
-              <ul className="list-disc ml-[1.6rem] w-[59.20%]">
-                <li className="text-[1.6rem] text-white leading-[3.2rem]">{position.responsibilities}</li>
-              </ul>
+              <div
+                className="ml-[1.6rem] text-[#ffffff] w-[90%] career-lists"
+                dangerouslySetInnerHTML={{ __html: role.responsibilities }}
+              />
             </div>
             <div className="space-y-[.8rem]">
-              <h4 className="text-[2rem] text-white">About You</h4>
-              <p className="text-[1.6rem] text-white leading-[3.2rem]">{position.about}</p>
+              <h4 className="text-[2rem] text-white">Qualifications</h4>{' '}
+              <div
+                className="ml-[1.6rem] text-[#ffffff] w-[90%] career-lists"
+                dangerouslySetInnerHTML={{ __html: role.qualifications }}
+              />
+            </div>
+            <div className="space-y-[.8rem] ">
+              <h4 className="text-[2rem] text-white">Salary</h4>
+              <p className="text-[1.6rem] text-white leading-[3.2rem]">{role.salary}</p>
+            </div>
+            <div className="space-y-[.8rem]">
+              <h4 className="text-[2rem] text-white">Benefits</h4>{' '}
+              <div
+                className="ml-[1.6rem] text-[#ffffff] w-[90%] career-lists"
+                dangerouslySetInnerHTML={{ __html: role.benefits }}
+              />
             </div>
             <div className="flex lg:hidden items-center space-x-[1.6rem] mt-[5.6rem]">
               <h4 className="text-[1.8rem] text-white">
-                <a href={`${position.link}`}>Apply Now</a>
+                <a href={`${role.link}`}>Apply Now</a>
               </h4>
               <svg className="w-[2.4rem] h-[2.4rem]">
                 <use href="/images/sprite.svg#icon-arrow" />
@@ -75,7 +94,7 @@ export async function getServerSideProps({ query: { position } }) {
   const data = await Promise.all(res.map((res) => res.json()));
   return {
     props: {
-      position: data[0].position,
+      role: data[0].position,
       contact: data[1].contact,
     },
   };

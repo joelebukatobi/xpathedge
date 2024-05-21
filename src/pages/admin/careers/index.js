@@ -11,7 +11,7 @@ import { parseCookies } from '@/helpers//index';
 // External Libraries
 import moment from 'moment/moment';
 
-export default function index({ positions, token }) {
+export default function index({ roles, token }) {
   // State
   const [slug, setSlug] = useState('');
   const [open, setOpen] = useState(false);
@@ -46,21 +46,21 @@ export default function index({ positions, token }) {
               </tr>
             </thead>
             <tbody>
-              {positions.map((position) => {
+              {roles.map((role) => {
                 return (
-                  <tr key={position.id}>
+                  <tr key={role.id}>
                     <td>{id++}</td>
-                    <td className="capitalize">{position.name}</td>
-                    <td className="first-letter:capitalize">{position.role.substring(0, 35)}...</td>
-                    <td className="first-letter:capitalize">{position.category}</td>
+                    <td className="capitalize">{role.position}</td>
+                    <td className="first-letter:capitalize">{role.job_description.substring(0, 35)}...</td>
+                    <td className="first-letter:capitalize">{role.category}</td>
                     <td>
                       <div className="flex items-center gap-x-[.8rem] pl-[1.6rem]">
-                        <Link href={`/admin/careers/${position.slug}/`}>
+                        <Link href={`/admin/careers/${role.slug}/`}>
                           <svg className="hover:stroke-green-600">
                             <use href={`/images/sprite.svg#icon-post`} />
                           </svg>
                         </Link>
-                        <div onClick={(e) => (e.preventDefault(), setSlug(position.slug), setOpen(toggle))}>
+                        <div onClick={(e) => (e.preventDefault(), setSlug(role.slug), setOpen(toggle))}>
                           <svg className="hover:stroke-red-600">
                             <use href={`/images/sprite.svg#icon-trash`} />
                           </svg>
@@ -92,7 +92,7 @@ export async function getServerSideProps({ req }) {
   return {
     props: {
       token,
-      positions: data.positions,
+      roles: data.positions,
     },
   };
 }

@@ -1,0 +1,9 @@
+.career-lists {
+  & ul {
+    @apply space-y-[.8rem];
+
+    & li {
+      @apply ml-[1.6rem] list-disc;
+    }
+  }
+}

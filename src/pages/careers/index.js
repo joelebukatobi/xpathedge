@@ -28,14 +28,7 @@ export default function index({ careers, contact }) {
           alt=""
           cursor-class="overlay"
         />
-        {/* <div className="hidden lg:block w-[20%] h-[100%]">
-          <img className="h-[100%] w-[100%]" src="/images/career-img-one.png" alt="" />
-        </div> */}
         <Image width={''} height={''} src={CareerImageMobile} className="lg:hidden w-[100%] " alt="" />
-
-        {/* <div className="hidden lg:block w-[20%] h-[100%]">
-          <img className="h-[100%] w-[100%]" src="/images/career-img-three.png" alt="" />
-        </div> */}
       </div>
       {careers.length === 0 ? (
         <div className="bg-[#191919] pt-[16rem] pb-[4rem]">

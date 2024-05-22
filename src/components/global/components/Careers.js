@@ -18,7 +18,7 @@ export default function Career({ careers }) {
     AOS.init();
   }, []);
   //
-  const options = ['design', 'engineering', 'operations'];
+  const options = ['design', 'engineering', 'operations', 'cloud and infrastructure'];
   const [selectedOption, setSelectedOption] = useState(null);
   //
   const filterCareers = (option) => {

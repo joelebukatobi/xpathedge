@@ -52,7 +52,7 @@ export default function index({ roles, token }) {
                     <td>{id++}</td>
                     <td className="capitalize">{role.position}</td>
                     <td className="first-letter:capitalize">{role.job_description.substring(0, 35)}...</td>
-                    <td className="first-letter:capitalize">{role.category}</td>
+                    <td className="capitalize">{role.category}</td>
                     <td>
                       <div className="flex items-center gap-x-[.8rem] pl-[1.6rem]">
                         <Link href={`/admin/careers/${role.slug}/`}>

@@ -133,6 +133,7 @@ export default function index({ token }) {
                   <option value={'design'}>Design</option>
                   <option value={'engineering'}>Engineering</option>
                   <option value={'operation'}>Operations</option>
+                  <option value={'cloud and infrastructure'}>Cloud and Infrastructure</option>
                 </select>
               </section>
             </div>

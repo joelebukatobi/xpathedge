@@ -32,7 +32,7 @@ export default function index({ role, token }) {
   // Handles submit for the form
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch(`${API_URL}/api/careers/${position.slug}`, {
+    const res = await fetch(`${API_URL}/api/careers/${role.slug}`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -133,6 +133,7 @@ export default function index({ role, token }) {
                   <option value={'design'}>Design</option>
                   <option value={'engineering'}>Engineering</option>
                   <option value={'operation'}>Operations</option>
+                  <option value={'cloud and infrastructure'}>Cloud and Infrastructure</option>
                 </select>
               </section>
             </div>

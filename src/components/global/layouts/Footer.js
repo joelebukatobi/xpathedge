@@ -1,15 +1,15 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 // Next JS
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 // Components
-import Container from '@/global//layouts/Container';
+import Container from "@/global//layouts/Container";
 
 // AOS
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Footer({ contact }) {
   useEffect(() => {
@@ -20,8 +20,10 @@ export default function Footer({ contact }) {
   return (
     <>
       <section className=" h-full bg-[#191919] text-white pt-[12rem] pb-[10.4rem]">
-        <Container className={'h-[80%] xl:h-[100%] flex flex-col justify-between'}>
-          {pathname === '/careers' || pathname === '/contact' ? null : (
+        <Container
+          className={"h-[80%] xl:h-[100%] flex flex-col justify-between"}
+        >
+          {pathname === "/careers" || pathname === "/contact" ? null : (
             <div
               data-aos="fade-right"
               data-aos-duration="500"
@@ -55,7 +57,9 @@ export default function Footer({ contact }) {
                 data-aos-easing="ease-in-out"
                 className="md:w-[27.63%] space-y-[.8rem] lg:space-y-[1.6rem] mb-[6.4rem] lg:mb-0"
               >
-                <h4 className="text-[2.4rem] font-bold font-Mulish">{contact.email}</h4>
+                <h4 className="text-[2.4rem] font-bold font-Mulish">
+                  {contact.email}
+                </h4>
                 <h5 className="text-[2rem]">{contact.address}</h5>
                 <h5 className="text-[2rem]">+1 (469) 918-4632</h5>
               </div>
@@ -67,13 +71,13 @@ export default function Footer({ contact }) {
                 className="w-[100%] md:w-[38.6%] flex gap-x-[4rem] md:gap-x-[10.4rem] flex-wrap  mb-[4rem]"
               >
                 <li className="text-[2rem] md:w-[15%] mb-[.8rem]">
-                  <a href={`${contact.linkedin}` ?? ''}>LinkedIn</a>
+                  <a href={`${contact.linkedin}` ?? ""}>LinkedIn</a>
                 </li>
                 <li className="text-[2rem] md:w-[15%] mb-[.8rem]">
-                  <a href={`${contact.twitter}` ?? ''}>Twitter</a>
+                  <a href={`${contact.twitter}` ?? ""}>Twitter</a>
                 </li>
                 <li className="text-[2rem] md:w-[15%] mb-[.8rem]">
-                  <a href={`${contact.instagram}` ?? ''}>Instagram</a>
+                  <a href={`${contact.instagram}` ?? ""}>Instagram</a>
                 </li>
               </ul>
             </div>
@@ -84,7 +88,9 @@ export default function Footer({ contact }) {
               data-aos-easing="ease-in-out"
               className="flex space-x-[4rem]"
             >
-              <p className="text-[1.6rem] text-[#676767]">Terms & Conditions</p>
+              <p className="text-[1.6rem] text-[#676767]">
+                <a href="/terms-and-condition"> Terms & Conditions</a>
+              </p>
               <p className="text-[1.6rem] text-[#676767]">Privacy Policy</p>
             </div>
           </div>

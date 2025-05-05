@@ -8,9 +8,10 @@ export default function index({}) {
     <>
       <Layout contact={[]} title={"xPathEdge | Privacy Policy"}>
         <Container>
-          <div className="px-4 py-8 max-w-4xl mx-auto space-y-8">
+          <div className="pt-[16%] md:pt-[32%] lg:pt-[16%] pb-[5%] space-y-8">
             <section className="space-y-4">
-              <h2 className="text-2xl font-semibold ">Privacy Policy</h2>
+              <h2 className="text-4xl font-semibold ">Privacy Policy</h2>
+
               <p>
                 XPATHEDGE (“we,” “our,” or “us”) is committed to protecting your
                 privacy. This Privacy Policy explains how your personal
@@ -516,7 +517,7 @@ export default function index({}) {
             </div>
           </section>
 
-          <section className="space-y-8">
+          <section className="space-y-8 pb-8">
             <div>
               <h2 className="text-xl font-semibold">
                 California Online Privacy Protection Act (CalOPPA)

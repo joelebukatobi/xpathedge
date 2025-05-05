@@ -91,7 +91,9 @@ export default function Footer({ contact }) {
               <p className="text-[1.6rem] text-[#676767]">
                 <a href="/terms-and-condition"> Terms & Conditions</a>
               </p>
-              <p className="text-[1.6rem] text-[#676767]">Privacy Policy</p>
+              <p className="text-[1.6rem] text-[#676767]">
+                <a href="/privacy-policy"> Privacy Policy</a>
+              </p>
             </div>
           </div>
         </Container>

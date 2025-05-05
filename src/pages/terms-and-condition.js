@@ -1,7 +1,7 @@
 import React from "react";
 
-import Container from "@/global//layouts/Container";
 import Layout from "@/global//layouts/Layout";
+import Container from "@/global//layouts/Container";
 
 export default function index({}) {
   return (

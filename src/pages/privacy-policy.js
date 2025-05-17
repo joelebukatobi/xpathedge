@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "@/global//layouts/Layout";
-import Container from "@/global//layouts/Container";
+import Layout from '@/global//layouts/Layout';
+import Container from '@/global//layouts/Container';
 
 export default function index({}) {
   return (
     <>
-      <Layout contact={[]} title={"xPathEdge | Privacy Policy"}>
+      <Layout contact={[]} title={'xPathEdge | Privacy Policy'}>
         <Container>
           <div className="pt-[16%] md:pt-[32%] lg:pt-[16%] pb-[5%] space-y-8">
             <section className="space-y-4">
@@ -82,7 +82,7 @@ export default function index({}) {
                   and others who help us deliver content or services.
                 </li>
                 <li>
-                  <strong>Website:</strong>{" "}
+                  <strong>Website:</strong>{' '}
                   <a
                     href="https://www.xpathedge.com"
                     target="_blank"
@@ -149,31 +149,11 @@ export default function index({}) {
               Do We Share the Information We Collect with Third Parties?
             </h2>
             <p>
-              We may share the information that we collect, both personal and
-              non-personal, with third parties such as advertisers, contest
-              sponsors, promotional and marketing partners, and others who
-              provide our content or whose products or services we think may
-              interest you. We may also share it with our current and future
-              affiliated companies and business partners. In the event of a
-              merger, asset sale, or other business reorganization, we may also
-              share or transfer your personal and non-personal information to
-              our successors-in-interest.
-            </p>
-            <p>
-              We may engage trusted third party service providers to perform
-              services on our behalf—such as hosting, email management,
-              marketing, credit card processing, and customer service. We will
-              likely share your personal and some non-personal information with
-              these providers to enable them to deliver their services to us and
-              you.
-            </p>
-            <p>
-              Portions of our log file data, including IP addresses, may be
-              shared with third parties like web analytics partners, developers,
-              and ad networks for analytics purposes. These may be used to
-              estimate location, connection speed, or device type. Such partners
-              may aggregate and analyze this data for auditing, reporting, and
-              marketing use.
+              We do not share personal data, including phone numbers, with third
+              parties, affiliates, or partners without user consent. Phone
+              numbers collected are used solely for the purpose of delivering
+              service updates, support messages, or notifications initiated by
+              XPATHEDGE.
             </p>
             <p>
               We may also disclose your information to government or law
@@ -562,7 +542,7 @@ export default function index({}) {
               <p>Don't hesitate to reach out if you have any questions.</p>
               <ul className="list-disc list-inside ml-4 space-y-1">
                 <li>
-                  <strong>Via Email:</strong>{" "}
+                  <strong>Via Email:</strong>{' '}
                   <a
                     href="mailto:hello@xpathedge.com"
                     className="text-blue-600 hover:underline"
@@ -571,7 +551,7 @@ export default function index({}) {
                   </a>
                 </li>
                 <li>
-                  <strong>Via Phone Number:</strong>{" "}
+                  <strong>Via Phone Number:</strong>{' '}
                   <a
                     href="tel:+14699184632"
                     className="text-blue-600 hover:underline"
@@ -580,7 +560,7 @@ export default function index({}) {
                   </a>
                 </li>
                 <li>
-                  <strong>Via this Link:</strong>{" "}
+                  <strong>Via this Link:</strong>{' '}
                   <a
                     href="https://www.xpathedge.com/contact"
                     target="_blank"

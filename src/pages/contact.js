@@ -69,7 +69,8 @@ export default function index({ contact }) {
                 className="md:w-[33.94%] text-[1.6rem] lg:text-[1.8rem]"
                 cursor-class="overlay"
               >
-                Our Team is geared towards solving even the most complex ideas. Talk to us about your needs
+                Our Team is geared towards solving even the most complex ideas.
+                Talk to us about your needs
               </p>
               <form
                 data-aos="fade-left"
@@ -133,6 +134,14 @@ export default function index({ contact }) {
                     <use href={`/images/sprite.svg#icon-arrow-slim`} />
                   </svg>
                 </button>
+
+                <p className="text-[1.4rem] text-[#979797] mt-[2rem]">
+                  By providing a telephone number and submitting this form, you
+                  are consenting to be contacted by SMS text message. Message &
+                  data rates may apply. Message frequency may vary. You can
+                  reply STOP to opt-out of further messaging. Reply HELP for
+                  more information.
+                </p>
               </form>
             </div>
           </Container>

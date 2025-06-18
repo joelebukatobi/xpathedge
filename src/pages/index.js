@@ -18,7 +18,9 @@ export default function index({ services, projects, contact }) {
   return (
     <Layout contact={contact}>
       <Header
-        heading={'Driving Growth and Innovation with Cutting-Edge Tech Solutions.'}
+        heading={
+          'Driving Growth and Innovation with Cutting-Edge Tech Solutions.'
+        }
         text={`From data-driven insights to integrated campaigns, we are your trusted partner in leveraging the power of technology to unlock your business's full potential..`}
         className={'mt-[10vh] pt-[5.6rem] pb-[8rem]'}
       />
@@ -68,17 +70,80 @@ export default function index({ services, projects, contact }) {
 }
 
 export async function getServerSideProps() {
-  const res = await Promise.all([
-    fetch(`${API_URL}/api/services`),
-    fetch(`${API_URL}/api/projects`),
-    fetch(`${API_URL}/api/contact/xpathedge`),
-  ]);
-  const data = await Promise.all(res.map((res) => res.json()));
+  let services = [];
+  let projects = [];
+  let contact = {};
+  let pageError = null; // To store a general error message for the page
+
+  try {
+    const fetchPromises = [
+      fetch(`${API_URL}/api/services`),
+      fetch(`${API_URL}/api/projects`),
+      fetch(`${API_URL}/api/contact/xpathedge`),
+    ];
+
+    const responses = await Promise.all(fetchPromises);
+
+    // Iterate through each response to check its status and parse it
+    const parsedDataPromises = responses.map(async (response, index) => {
+      const url = (await fetchPromises[index]).url;
+
+      if (!response.ok) {
+        // If any response is not OK (e.g., 4xx or 5xx status)
+        const errorText = await response.text();
+
+        console.error(`--- API Error for ${url} ---`);
+        console.error(`Status: ${response.status}`);
+        console.error(`Raw Response:`, errorText);
+        console.error(`--------------------------`);
+
+        // Propagate an error for this specific fetch, so we don't try to JSON parse it
+        throw new Error(
+          `Failed to fetch ${url} (Status: ${
+            response.status
+          }). Response: ${errorText.substring(0, 200)}...`
+        );
+      }
+
+      try {
+        const json = await response.json();
+        return json;
+      } catch (jsonParseError) {
+        // Catch block to specifically catch the SyntaxError if the content ISN'T JSON
+        const rawResponse = await response.text(); // get the raw text
+        console.error(`--- JSON Parse Error for ${url} ---`);
+        console.error(`Error:`, jsonParseError.message);
+        console.error(`Attempted to parse:`, rawResponse);
+        console.error(`------------------------------------`);
+        throw new Error(
+          `Invalid JSON received from ${url}. Raw response: ${rawResponse.substring(
+            0,
+            200
+          )}...`
+        );
+      }
+    });
+
+    const data = await Promise.all(parsedDataPromises);
+
+    services = data[0].services || [];
+    projects = data[1].projects || [];
+    contact = data[2].contact || {};
+  } catch (error) {
+    console.error('--- Global getServerSideProps Fetch Error ---', error);
+    pageError = `Failed to load essential data for the page. Details: ${error.message}`;
+  }
+
+  console.log('This is the contact data', contact);
+  console.log('This is the services data', services);
+  console.log('This is the projects data', projects);
   return {
     props: {
-      services: data[0].services,
-      projects: data[1].projects,
-      contact: data[2].contact,
+      services,
+      projects,
+      contact,
+      pageError,
     },
+    // revalidate: 60,
   };
 }

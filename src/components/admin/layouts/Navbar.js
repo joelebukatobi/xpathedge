@@ -40,7 +40,8 @@ export default function Navbar({ user }) {
 
       <div className="nav_user">
         <img
-          src={user.image === null ? `/images/user-placeholder.png` : `${API_URL}/storage/${user.image}`}
+          // src={user.image === null ? `/images/user-placeholder.png` : `${API_URL}/storage/${user.image}`}
+          src={`/images/user-placeholder.png`}
           alt="User's Image"
         />
         <div className="flex flex-col">

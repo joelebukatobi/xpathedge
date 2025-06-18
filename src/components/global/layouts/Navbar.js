@@ -8,10 +8,18 @@ export default function Navbar({ contact }) {
     setOpen(!open);
   };
   return (
-    <Container className={'max-w-[100vw] fixed top-[0rem] z-[50] py-[1.6vh] bg-[#191919]  px-[0]'}>
+    <Container
+      className={
+        'max-w-[100vw] fixed top-[0rem] z-[50] py-[1.6vh] bg-[#191919]  px-[0]'
+      }
+    >
       <Container className={'max-width w-[100%] px-[0]'}>
         <section
-          className={open ? `h-[100vh] [w-100%] px-[3.2rem] py-[.8rem]` : `px-[3.2rem] h-[auto] w-[100%] py-[.8rem]`}
+          className={
+            open
+              ? `h-[100vh] [w-100%] px-[3.2rem] py-[.8rem]`
+              : `px-[3.2rem] h-[auto] w-[100%] py-[.8rem]`
+          }
         >
           <div className="flex items-center justify-between h-[8.8vh]">
             <a href="/">
@@ -22,10 +30,28 @@ export default function Navbar({ contact }) {
                 cursor-class="no-border"
               />
             </a>
-            <div onClick={toggle} className="flex items-center cursor-pointer" cursor-class="navmenu">
-              <p className={open ? `hidden` : `font-medium text-[1.6rem] text-white text- mr-[.8rem]`}>Menu</p>
+            <div
+              onClick={toggle}
+              className="flex items-center cursor-pointer"
+              cursor-class="navmenu"
+            >
+              <p
+                className={
+                  open
+                    ? `hidden`
+                    : `font-medium text-[1.6rem] text-white text- mr-[.8rem]`
+                }
+              >
+                Menu
+              </p>
               <svg className="h-[2.4rem] w-[2.4rem]">
-                <use href={open ? `/images/sprite.svg#icon-global-close` : `/images/sprite.svg#icon-menu`} />
+                <use
+                  href={
+                    open
+                      ? `/images/sprite.svg#icon-global-close`
+                      : `/images/sprite.svg#icon-menu`
+                  }
+                />
               </svg>
             </div>
           </div>
@@ -46,14 +72,22 @@ export default function Navbar({ contact }) {
                       <use href="/images/sprite.svg#logo-large-transition" />
                     </svg>
                   </div>
-                  <div className="w-[71.59%] space-y-[1.6rem]" cursor-class="overlay">
-                    <h4 className="text-[2.4rem] font-bold font-Mulish">{contact.email}</h4>
+                  <div
+                    className="w-[71.59%] space-y-[1.6rem]"
+                    cursor-class="overlay"
+                  >
+                    <h4 className="text-[2.4rem] font-bold font-Mulish">
+                      {contact.email}
+                    </h4>
                     <h5 className="text-[2rem]">{contact.address}</h5>
                     <h5 className="text-[2rem]">+1 (469) 918-4632</h5>
                   </div>
                 </div>
                 <p className="text-[1.6rem] md:hidden">Follow Us:</p>
-                <ul className="flex gap-x-[3.2rem] md:gap-x-[10.4rem] gap-y-[4rem] flex-wrap" cursor-class="overlay">
+                <ul
+                  className="flex gap-x-[3.2rem] md:gap-x-[10.4rem] gap-y-[4rem] flex-wrap"
+                  cursor-class="overlay"
+                >
                   <li className="text-[2rem] md:w-[15%]">
                     <a href={`${contact.linkedin}` ?? ''}>LinkedIn</a>
                   </li>
@@ -65,7 +99,10 @@ export default function Navbar({ contact }) {
                   </li>
                 </ul>
               </div>
-              <div className="relative h-[100%] flex items-center md:block md:h-auto " cursor-class="overlay">
+              <div
+                className="relative h-[100%] flex items-center md:block md:h-auto "
+                cursor-class="overlay"
+              >
                 <ul className="space-y-[1.6rem] xl:space-y-[4.8rem]">
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
                     <a href="/works">Work</a>
@@ -75,6 +112,9 @@ export default function Navbar({ contact }) {
                   </li>
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
                     <a href="/careers">Career </a>
+                  </li>
+                  <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
+                    <a href="/team">Team </a>
                   </li>
                   <li className="capitalize font-bold font-IBMPlexMono text-[4.4rem] md:text-[7.8rem]">
                     <a href="/contact">Contact</a>

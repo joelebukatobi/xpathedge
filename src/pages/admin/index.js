@@ -18,7 +18,11 @@ export default function index({ posts, categories, tags }) {
       <div className="flex justify-between">
         <Card caption={'posts'} total={`${posts.length}`} svg={'icon-post'} />
         <Card caption={'tags'} total={`${tags.length}`} svg={'icon-tag'} />
-        <Card caption={'categories'} total={`${categories.length}`} svg={'icon-category'} />
+        <Card
+          caption={'categories'}
+          total={`${categories.length}`}
+          svg={'icon-category'}
+        />
         <Card caption={'users'} total={'2'} svg={'icon-user'} />
       </div>
       <div className="mt-[4rem]">
@@ -31,7 +35,9 @@ export default function index({ posts, categories, tags }) {
                 <th>Category</th>
                 <th>Published Date</th>
                 <th>Author</th>
-                <th className="@apply rounded-tr-[.8rem] w-[10%] pl-[0]">Edit</th>
+                <th className="@apply rounded-tr-[.8rem] w-[10%] pl-[0]">
+                  Edit
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -40,7 +46,9 @@ export default function index({ posts, categories, tags }) {
                   <tr key={post.id}>
                     <td>{id++}</td>
                     <td className="capitalize">{post.title}</td>
-                    <td className="first-letter:capitalize">{post.category.name}</td>
+                    <td className="first-letter:capitalize">
+                      {post.category.name}
+                    </td>
                     <td>{moment(post.created_at).format('L')}</td>
                     <td>{post.user.first_name + ' ' + post.user.last_name}</td>
                     <td>
@@ -72,6 +80,8 @@ export async function getServerSideProps({ req }) {
   ]);
 
   const data = await Promise.all(res.map((res) => res.json()));
+
+  console.log('This is the data', data);
 
   return {
     props: {

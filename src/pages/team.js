@@ -63,13 +63,13 @@ export default function index({ heading, text, contact, services, teams }) {
     //   role: 'Software Engineer',
     //   imageUrl: 'https://placehold.co/400x400/FFC733/000000/png?text=SWE3+E.A.',
     // },
-    // {
-    //   id: 8,
-    //   name: 'Frank White',
-    //   role: 'Accountant',
-    //   imageUrl:
-    //     'https://placehold.co/400x400/8A2BE2/FFFFFF/png?text=Acct1+F.W.',
-    // },
+    {
+      id: 8,
+      name: 'Adenike Kolawole',
+      role: 'Accountant',
+      imageUrl:
+        'https://res.cloudinary.com/dnsmfoqta/image/upload/v1750284523/Calendar_Image_from_Teams_1_ikebfa.jpg',
+    },
     // {
     //   id: 9,
     //   name: 'Grace Black',
@@ -98,8 +98,13 @@ export default function index({ heading, text, contact, services, teams }) {
       <Header
         heading="Meet The Dream Team."
         text="Great ideas come to life when passionate people work together."
+        className={'mt-44 pb-10 pt-10'}
       />
-      <Container className={'my-20 flex flex-wrap gap-x-4 gap-y-10'}>
+      <Container
+        className={
+          'my-20 flex md:flex-row flex-wrap gap-x-4 gap-y-10 items-center flex-col'
+        }
+      >
         {team.map((member) => {
           return (
             <div key={member.id} className="flex-1 mb-8">
